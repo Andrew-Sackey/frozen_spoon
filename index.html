@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frozen Spoon — Cafe &amp; Gelato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ============================================================
+     PAGE LOADER
+============================================================ -->
+<div id="loader">
+  <div id="loader-logo">
+    <img src="logo.png" alt="Frozen Spoon Cafe and Gelato" class="loader-logo-img"/>
+  </div>
+  <div id="loader-top"></div>
+  <div id="loader-bottom"></div>
+</div>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<nav id="nav">
+  <a href="#" class="nav-logo-link" aria-label="Frozen Spoon home">
+    <div class="nav-logo-svg">
+      <img src="logo.png" alt="Frozen Spoon Cafe and Gelato" class="nav-logo-img"/>
+    </div>
+  </a>
+
+  <div class="nav-glass-pill">
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#services" class="nav-link">What We Do</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Reservation</a>
+  </div>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay (click outside to close) -->
+<div id="drawer-overlay"></div>
+
+<!-- Mobile nav drawer -->
+<div id="mobile-drawer">
+  <button id="drawer-close" aria-label="Close menu">
+    <span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#services">What We Do</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="drawer-cta">Reservation</a></li>
+  </ul>
+</div>
+
+<!-- ============================================================
+     HERO SLIDESHOW
+============================================================ -->
+<section id="hero" aria-label="Hero">
+
+  <!-- Slide track -->
+  <div id="hero-track">
+
+    <!-- ─── SLIDE 1: Full bleed, bottom-left bold block ─── -->
+    <div class="hero-slide active" data-slide="1" data-style="bottom-bold">
+      <div class="slide-bg">
+        <!-- Replace with your food image -->
+        <img src="./images/h2.JPEG" alt="Slide 1" class="slide-img" data-zoom="in"/>
+        <div class="slide-vignette slide-vignette-bottom"></div>
+      </div>
+      <div class="slide-content sc-bottom-left">
+        <p class="sc-eyebrow">Cafe &amp; Gelato · Accra</p>
+        <h2 class="sc-headline sc-headline-chunky">
+          <span class="sc-line">Soft.</span>
+          <span class="sc-line">Sweet.</span>
+          <span class="sc-line">Exact.</span>
+        </h2>
+        <!-- <p class="sc-body">Made by hand. Served before it settles.</p> -->
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 2: Split screen ─── -->
+    <div class="hero-slide" data-slide="2" data-style="split">
+      <div class="slide-bg">
+        <img src="./images/h8.JPEG" alt="Slide 2" class="slide-img" data-zoom="gentle"/>
+        <div class="slide-vignette slide-vignette-right"></div>
+      </div>
+      <div class="slide-content sc-split-panel">
+        <div class="split-text-panel">
+          <p class="sc-eyebrow sc-eyebrow-dark">Our Kitchen</p>
+          <h2 class="sc-headline sc-headline-split">
+            <span class="sc-line">Made</span>
+            <span class="sc-line sc-italic">fresh.</span>
+            <span class="sc-line">Always.</span>
+          </h2>
+          <p class="sc-body sc-body-dark">Small batches. Big flavour. No shortcuts.</p>
+          <a href="#about" class="sc-btn sc-btn-dark">Our story</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 3: Script + massive bold center ─── -->
+    <div class="hero-slide" data-slide="3" data-style="center-bold">
+      <div class="slide-bg">
+        <img src="./images/h11.png" alt="Slide 3" class="slide-img" data-zoom="out"/>
+        <div class="slide-vignette slide-vignette-full"></div>
+      </div>
+      <div class="slide-content sc-center">
+        <p class="sc-script">Handcrafted</p>
+        <h2 class="sc-headline sc-headline-massive">Served Cold</h2>
+        <p class="sc-body sc-body-center">Single-origin chocolate. Madagascan vanilla. Pure joy.</p>
+        <a href="#menu" class="sc-btn sc-btn-outline">See the menu</a>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 4: Frosted glass card ─── -->
+    <div class="hero-slide" data-slide="4" data-style="glass-card">
+      <div class="slide-bg">
+        <img src="./images/h10.jpeg" alt="Slide 4" class="slide-img" data-zoom="drift"/>
+        <div class="slide-vignette slide-vignette-light"></div>
+      </div>
+      <div class="slide-content sc-glass-wrap">
+        <div class="sc-glass-card sc-glass-card-fun">
+          <p class="sc-eyebrow sc-eyebrow-fun">✦ From Our Kitchen</p>
+          <span class="sc-title-happiness">Every plate</span>
+          <div class="sc-glass-vertical">
+            <div class="sc-vertical-item sc-vi-pink">
+              <span class="sc-vi-dot"></span>
+              <span class="sc-vi-word">crafted.</span>
+            </div>
+            <div class="sc-vertical-item sc-vi-yellow">
+              <span class="sc-vi-dot"></span>
+              <span class="sc-vi-word">with care.</span>
+            </div>
+            <div class="sc-vertical-item sc-vi-caramel">
+              <span class="sc-vi-dot"></span>
+              <span class="sc-vi-word">always.</span>
+            </div>
+          </div>
+          <p class="sc-body">Real ingredients. Bold flavour. Nothing skipped.</p>
+          <a href="#menu" class="sc-btn sc-btn-explore">See the menu</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── SLIDE 5: Bottom caption, luxury minimal ─── -->
+    <div class="hero-slide" data-slide="5" data-style="minimal-caption">
+      <div class="slide-bg">
+        <img src="./images/h5.png" alt="Slide 5" class="slide-img" data-zoom="in"/>
+        <div class="slide-vignette slide-vignette-bottom-heavy"></div>
+      </div>
+      <div class="slide-content sc-caption-bottom">
+        <div class="caption-line-rule"></div>
+        <h2 class="sc-headline sc-headline-caption">A place worth<br/><em>coming back to.</em></h2>
+        <p class="sc-body sc-body-caption">Frozen Spoon Cafe &amp; Gelato · Accra, Ghana</p>
+      </div>
+    </div>
+
+  </div><!-- /hero-track -->
+
+  <!-- Slide progress dots -->
+  <div id="hero-dots">
+    <button class="hero-dot active" data-hdot="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-hdot="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-hdot="2" aria-label="Slide 3"></button>
+    <button class="hero-dot" data-hdot="3" aria-label="Slide 4"></button>
+    <button class="hero-dot" data-hdot="4" aria-label="Slide 5"></button>
+  </div>
+
+  <!-- Prev / Next arrows -->
+  <button class="hero-arrow hero-arrow-prev" id="hero-prev" aria-label="Previous slide">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="hero-arrow hero-arrow-next" id="hero-next" aria-label="Next slide">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+
+
+</section>
+
+<!-- ============================================================
+     PLACEHOLDER — more sections slot here
+============================================================ -->
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section id="about" aria-label="About Frozen Spoon">
+
+  <!-- Welcome header -->
+  <div class="about-welcome">
+    <p class="aw-eyebrow">Est. 2019 · Accra, Ghana</p>
+    <h2 class="aw-headline">
+      <span class="aw-line-wrap"><span class="aw-line">Welcome to</span></span>
+      <span class="aw-line-wrap"><span class="aw-line aw-italic">Frozen Spoon.</span></span>
+    </h2>
+    <p class="aw-sub">A cafe, a gelato shop, and a place worth coming back to.</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="about-tabs" role="tablist">
+    <button class="ab-tab active" data-tab="0" role="tab" aria-selected="true">
+      <span class="ab-tab-num">01</span> Meet the Founder
+    </button>
+    <button class="ab-tab" data-tab="1" role="tab" aria-selected="false">
+      <span class="ab-tab-num">02</span> Our Story
+    </button>
+    <button class="ab-tab" data-tab="2" role="tab" aria-selected="false">
+      <span class="ab-tab-num">03</span> Feel the Vibe
+    </button>
+  </div>
+
+  <!-- Panel stage -->
+  <div class="about-stage" id="about-stage">
+
+    <!-- ─── PANEL 0: Meet the Founder ─── -->
+    <div class="ab-panel active" data-panel="0">
+      <div class="ab-text-panel ab-panel-founder">
+        <div class="ab-text-inner">
+          <p class="ab-panel-eyebrow">The Founder</p>
+          <h3 class="ab-panel-name">Joana<br/><em>Hammond-Ahorlu</em></h3>
+          <p class="ab-panel-body">She started with one freezer and an idea — that food made with real intention tastes different. What began as a small gelato operation has grown into a full cafe, still run with the same quiet ambition.</p>
+          <div class="ab-panel-stats">
+            <div class="ab-stat"><span class="ab-stat-num">2019</span><span class="ab-stat-label">Founded</span></div>
+            <div class="ab-stat"><span class="ab-stat-num">100%</span><span class="ab-stat-label">Handmade</span></div>
+            <div class="ab-stat"><span class="ab-stat-num">1</span><span class="ab-stat-label">Freezer to start</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ab-img-wrap ab-img-tall ab-img-empty">
+        <div class="ab-founder-placeholder">
+          <svg class="ab-founder-silhouette" viewBox="0 0 200 320" preserveAspectRatio="xMidYMax meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- head -->
+            <ellipse cx="100" cy="68" rx="42" ry="50" fill="#c8bfb4"/>
+            <!-- neck -->
+            <rect x="86" y="114" width="28" height="22" rx="7" fill="#c8bfb4"/>
+            <!-- shoulders / body filling full height -->
+            <path d="M0 320 C0 230 55 175 100 162 C145 175 200 230 200 320Z" fill="#c8bfb4"/>
+          </svg>
+        </div>
+        <div class="ab-img-badge">Founder &amp; CEO</div>
+      </div>
+    </div>
+
+    <!-- ─── PANEL 1: Our Story ─── -->
+    <div class="ab-panel" data-panel="1">
+      <div class="ab-text-panel ab-panel-story">
+        <div class="ab-text-inner">
+          <p class="ab-panel-eyebrow">Our Story</p>
+          <h3 class="ab-panel-headline">One freezer.<br/><em>One idea.</em><br/>No shortcuts.</h3>
+          <p class="ab-panel-body">We make everything in small batches — the only way we know how. The gelato is hand-spun fresh each morning. The waffles made to order. If you're going to do something, do it right.</p>
+          <p class="ab-panel-body">Frozen Spoon isn't trying to be the biggest cafe in Accra. Just the one you remember.</p>
+          <a href="#menu" class="ab-panel-link">
+            See what we make
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="ab-img-wrap ab-img-landscape">
+        <img src="./images/sty.png" alt="The Frozen Spoon kitchen"/>
+        <div class="ab-img-quote">&ldquo;Made by hand.<br/>Always.&rdquo;</div>
+      </div>
+    </div>
+
+    <!-- ─── PANEL 2: Feel the Vibe ─── -->
+    <div class="ab-panel" data-panel="2">
+      <div class="ab-text-panel ab-panel-vibe">
+        <div class="ab-text-inner">
+          <p class="ab-panel-eyebrow">The Vibe</p>
+          <h3 class="ab-panel-headline">Warm light.<br/><em>Unhurried pace.</em><br/>Your table.</h3>
+          <p class="ab-panel-body">Good music at a volume where conversation still feels easy. Seating that makes you want to stay. Light that makes the food look the way it deserves to.</p>
+          <div class="ab-vibe-tags">
+            <span class="ab-vibe-tag">Dine In</span>
+            <span class="ab-vibe-tag">Takeaway</span>
+            <span class="ab-vibe-tag">Private Events</span>
+            <span class="ab-vibe-tag">Corporate</span>
+          </div>
+        </div>
+      </div>
+      <div class="ab-img-wrap ab-img-collage">
+        <!-- ftv1: tall portrait, left column 45% -->
+        <div class="ab-collage-main">
+          <img src="./images/ftv1.png" alt="The Frozen Spoon space"/>
+          <span class="ab-collage-word">Warm.</span>
+        </div>
+        <!-- ftv2 + ftv3: stacked right column 40% -->
+        <div class="ab-collage-sec ab-collage-sec-a">
+          <img src="./images/ftv2.png" alt="The atmosphere"/>
+        </div>
+        <div class="ab-collage-sec ab-collage-sec-b">
+          <img src="./images/ftv3.png" alt="The vibe"/>
+          <span class="ab-collage-word">Yours.</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /about-stage -->
+
+</section>
+<!-- ============================================================
+     END ABOUT SECTION
+============================================================ -->
+
+
+
+
+<!-- =====================================================
+       MENU SECTION v2 — Photo First, Big & Bold
+       Slot after closing </section> of #about in index_v2.html
+  ===================================================== -->
+  <section id="menu" aria-label="Menu">
+
+    <!-- ── FULL BLEED HERO BANNER ── -->
+    <div id="menu-hero-banner">
+      <img
+        src="./images/h3.JPEG"
+        alt="Frozen Spoon food spread"
+        id="menu-hero-img"
+      />
+      <div id="menu-hero-overlay"></div>
+      <div id="menu-hero-text">
+        <h2 class="mh-big-title"><em>Menu</em></h2>
+      </div>
+      <!-- Scroll cue -->
+      <div id="menu-scroll-cue">
+        <span class="msc-line"></span>
+        <span class="msc-label">Explore</span>
+      </div>
+    </div>
+
+    <!-- ── MAIN MENU BODY ── -->
+    <div id="menu-body">
+
+      <!-- Left anchor panel -->
+      <div id="menu-left">
+        <div id="menu-left-inner">
+          <p class="ml-eyebrow">Our Menu</p>
+          <h3 class="ml-headline" id="menu-active-cat-name">Breakfast</h3>
+          <p class="ml-body">Everything made to order. Small batches, exactly right.</p>
+          <a
+            href="https://oddmenu.com/p/frozenspoon-gh/cmkbj1hy00f3mwd6r17wm2xuh"
+            target="_blank" rel="noopener"
+            class="ml-full-link"
+          >
+            Full menu &rarr;
+          </a>
+
+          <!-- Category count -->
+          <p class="ml-count">
+            <span id="menu-item-count">4</span> items
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: card rail -->
+      <div id="menu-right">
+
+        <!-- Cards container — JS populates this -->
+        <div id="menu-cards" aria-live="polite"></div>
+
+        <!-- Drag hint -->
+        <p id="menu-drag-hint">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 8l4 4-4 4M6 8l-4 4 4 4"/></svg>
+          Drag to browse
+        </p>
+
+      </div><!-- /menu-right -->
+
+    </div><!-- /menu-body -->
+
+    <!-- ── CATEGORY TAB STRIP ── -->
+    <div id="menu-tab-strip">
+      <div id="menu-tabs-inner">
+
+        <!-- FOOD categories -->
+        <button class="menu-tab-group-label">Food</button>
+
+        <button class="menu-tab active" data-cat="breakfast">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3"/>
+          </svg>
+          <span>Breakfast</span>
+        </button>
+
+        <button class="menu-tab" data-cat="salads">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/>
+          </svg>
+          <span>Salads</span>
+        </button>
+
+        <button class="menu-tab" data-cat="sandwiches">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="3" rx="1.5"/><rect x="2" y="15" width="20" height="3" rx="1.5"/><path d="M5 9v6M9 9v6M13 9v6M17 9v6M21 9v6"/>
+          </svg>
+          <span>Sandwiches</span>
+        </button>
+
+        <button class="menu-tab" data-cat="burgers">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11h18M3 15h18"/><path d="M5 19h14a2 2 0 002-2v-1H3v1a2 2 0 002 2z"/><path d="M5 5h14a2 2 0 012 2v1H3V7a2 2 0 012-2z"/>
+          </svg>
+          <span>Burgers</span>
+        </button>
+
+        <button class="menu-tab" data-cat="alacarte">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+          <span>À La Carte</span>
+        </button>
+
+        <!-- DRINKS -->
+        <button class="menu-tab-group-label">Drinks</button>
+
+        <button class="menu-tab" data-cat="coffee">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/>
+          </svg>
+          <span>Coffee</span>
+        </button>
+
+        <button class="menu-tab" data-cat="juices">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="2" x2="8" y2="6"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><path d="M4 6h16l-2 14H6L4 6z"/>
+          </svg>
+          <span>Juices</span>
+        </button>
+
+        <button class="menu-tab" data-cat="smoothies">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 2h8l1 6H7L8 2z"/><path d="M7 8l1 14h8l1-14"/>
+          </svg>
+          <span>Smoothies</span>
+        </button>
+
+        <button class="menu-tab" data-cat="tea">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 010 8h-1"/><path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"/>
+          </svg>
+          <span>Tea</span>
+        </button>
+
+        <!-- DESSERTS -->
+        <button class="menu-tab-group-label">Desserts</button>
+
+        <button class="menu-tab" data-cat="freakshakes">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 2h8l2 4H6L8 2z"/><rect x="5" y="6" width="14" height="14" rx="2"/><path d="M12 6v14M5 13h14"/>
+          </svg>
+          <span>Freakshakes</span>
+        </button>
+
+        <button class="menu-tab" data-cat="pancakes">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="6" rx="9" ry="3"/><ellipse cx="12" cy="12" rx="9" ry="3"/><ellipse cx="12" cy="18" rx="9" ry="3"/>
+          </svg>
+          <span>Pancakes</span>
+        </button>
+
+        <button class="menu-tab" data-cat="waffles">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+          </svg>
+          <span>Waffles</span>
+        </button>
+
+        <button class="menu-tab" data-cat="icecream">
+          <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22l4-10H8l4 10z"/><circle cx="12" cy="8" r="5"/>
+          </svg>
+          <span>Ice Cream</span>
+        </button>
+
+      </div><!-- /menu-tabs-inner -->
+    </div><!-- /menu-tab-strip -->
+
+    <!-- ── FULL BLEED FEATURE: rotating spotlight images ── -->
+    <div id="menu-spotlight">
+      <div id="menu-spotlight-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1600&h=900&fit=crop&q=85"
+          alt="Featured dish"
+          id="menu-spotlight-img"
+        />
+        <div id="menu-spotlight-overlay"></div>
+      </div>
+      <div id="menu-spotlight-text">
+        <p class="ms-eyebrow">Featured</p>
+        <h3 class="ms-headline" id="ms-headline-text">Spaghetti &amp; Meatballs</h3>
+        <p class="ms-body" id="ms-body-text">Hand-rolled meatballs, slow-simmered tomato, a snow of aged parmesan. Comfort, made precise.</p>
+        <a href="https://wa.me/233557388773" target="_blank" rel="noopener" class="ms-cta" id="ms-cta-link">Order via WhatsApp &rarr;</a>
+      </div>
+    </div>
+
+  </section>
+  <!-- =====================================================
+       END MENU SECTION v2
+  ===================================================== -->
+
+<!-- ============================================================
+     STATEMENT SECTION — full-screen video sequence
+============================================================ -->
+<section id="statement" aria-label="The Statement">
+
+  <!-- Layer 1: Video + tint + vignette + flash overlay -->
+  <div id="stmt-bg">
+    <video id="stmt-video" muted playsinline preload="auto"></video>
+    <div id="stmt-tint"></div>
+    <div id="stmt-vignette"></div>
+    <div id="stmt-flash"></div>
+  </div>
+
+  <!-- Layer 2: Bottom-left caption -->
+  <div id="stmt-caption">
+    <div id="stmt-caption-inner"></div>
+  </div>
+
+  <!-- Layer 3: Top-right brand badge + progress bar + mute -->
+  <div id="stmt-badge">
+    <div class="stmt-badge-top">
+      <span class="stmt-badge-label">Frozen Spoon · Accra</span>
+      <button id="stmt-mute" aria-label="Toggle sound">
+        <!-- Speaker icon (muted) -->
+        <svg class="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M11 5L6 9H3v6h3l5 4V5Z" fill="currentColor"/>
+          <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <!-- Speaker icon (unmuted) -->
+        <svg class="icon-sound" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M11 5L6 9H3v6h3l5 4V5Z" fill="currentColor"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="stmt-progress-track">
+      <div id="stmt-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- Click-to-pause zone -->
+  <div id="stmt-overlay">
+    <div id="stmt-pause-icon">
+      <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+        <circle cx="26" cy="26" r="25" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+        <polygon points="21,17 38,26 21,35" fill="white" opacity=".9"/>
+      </svg>
+    </div>
+  </div>
+
+</section>
+<!-- ============================================================
+     END STATEMENT SECTION
+============================================================ -->
+
+
+
+
+<!-- =====================================================
+       GALLERY SECTION v2 — Instagram-esque editorial grid
+       Slot after closing </section> of #menu in index_v2.html
+  ===================================================== -->
+  <section id="gallery" aria-label="Gallery">
+
+    <!-- ── Section header ── -->
+    <div class="gal-header">
+      <p class="gal-eyebrow">Our Kitchen. Our Craft.</p>
+      <h2 class="gal-headline">
+        <span class="gal-hl-wrap"><span class="gal-hl-line">From our</span></span>
+        <span class="gal-hl-wrap"><span class="gal-hl-line gal-italic">kitchen.</span></span>
+      </h2>
+      <p class="gal-sub">@frozenspoon_gh</p>
+    </div>
+
+    <!-- ── The Grid ── -->
+    <!-- Layout: 4 columns. Some cards span 2 cols for featured moments.
+         To swap images: replace the src on any <img> below.
+         Recommended: use your actual Instagram food shots.
+         All images are currently Unsplash placeholders.              -->
+    <div id="gallery-grid">
+
+      <!-- Row 1: featured (2-col) + two regulars -->
+
+      <div class="gal-card gal-span-2 gal-tall" data-index="1">
+        <!-- FEATURED: best hero shot — ice cream drip or waffle -->
+        <img src="./images/sty.png" alt="Gallery 1" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="2">
+        <!-- Waffle shot -->
+        <img src="./images/men24.png" alt="Gallery 2" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="3">
+        <!-- Pancake stack -->
+        <img src="./images/g1.PNG" alt="Gallery 3" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 2: four regulars -->
+
+      <div class="gal-card gal-square" data-index="4">
+        <!-- Coffee / drinks -->
+        <img src="./images/h8.JPEG" alt="Gallery 4" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="5">
+        <!-- Burger -->
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=600&fit=crop&q=85" alt="Gallery 5" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-span-2 gal-square" data-index="6">
+        <!-- FEATURED: gelato tray / spreads shot -->
+        <img src="./images/gal2.JPEG" alt="Gallery 6" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 3: two regulars + featured (2-col) -->
+
+      <div class="gal-card gal-square" data-index="7">
+        <!-- Smoothie / juice -->
+        <img src="./images/gal3.png" alt="Gallery 7" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="8">
+        <!-- Sandwich / breakfast -->
+        <img src="./images/gal4.png" alt="Gallery 8" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="9">
+        <!-- Ice cream scoop -->
+        <img src="./images/men11.jpeg" alt="Gallery 9" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="10">
+        <!-- Freakshake -->
+        <img src="./images/men21.JPEG" alt="Gallery 10" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 4: featured tall (2-col) + stack of 2 -->
+
+      <div class="gal-card gal-span-2 gal-tall" data-index="11">
+        <!-- FEATURED: overhead food spread -->
+        <img src="./images/gal5.png" alt="Gallery 11" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="12">
+        <!-- Coffee latte art -->
+        <img src="./images/gal6.png" alt="Gallery 12" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="13">
+        <!-- Salad / fresh -->
+        <img src="./images/h7.png" alt="Gallery 13" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 5: three across the bottom -->
+
+      <div class="gal-card gal-rect" data-index="14">
+        <!-- Pasta / mains -->
+        <img src="./images/gal7.JPEG" alt="Gallery 14" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-rect" data-index="15">
+        <!-- Chocolate dessert -->
+        <img src="./images/men23.jpeg" alt="Gallery 15" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-rect" data-index="16">
+        <!-- Drinks / tea -->
+        <img src="./images/men4.png" alt="Gallery 16" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 6: 4 squares -->
+
+      <div class="gal-card gal-square" data-index="17">
+        <img src="./images/men13.JPEG" alt="Gallery 17" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="18">
+        <img src="./images/gal13.png" alt="Gallery 18" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="19">
+        <img src="./images/gal8.png" alt="Gallery 19" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="20">
+        <img src="./images/ftv4.png" alt="Gallery 20" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 7: featured wide + 2 squares -->
+
+      <div class="gal-card gal-span-2 gal-rect" data-index="21">
+        <img src="./images/gal11.png" alt="Gallery 21" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="22">
+        <img src="./images/gal10.png" alt="Gallery 22" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="23">
+        <img src="./images/gal9.png" alt="Gallery 23" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <!-- Row 8: featured tall + 2 squares -->
+
+      <div class="gal-card gal-span-2 gal-tall" data-index="24">
+        <img src="https://images.unsplash.com/photo-1450610952043-fd6b9b81bc23?w=800&h=1000&fit=crop&q=85" alt="Gallery 24" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="25">
+        <img src="./images/gal12.png" alt="Gallery 25" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+      <div class="gal-card gal-square" data-index="26">
+        <img src="./images/gal14.png" alt="Gallery 26" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+
+    <!-- ── Lightbox (click to expand) ── -->
+    <div id="gal-lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+      <button id="gal-lb-close" aria-label="Close photo">&times;</button>
+      <button id="gal-lb-prev" aria-label="Previous photo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="gal-lb-next" aria-label="Next photo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div id="gal-lb-img-wrap">
+        <img id="gal-lb-img" src="" alt="Gallery photo"/>
+      </div>
+      <p id="gal-lb-counter"></p>
+    </div>
+    <div id="gal-lb-backdrop"></div>
+
+  </section>
+  <!-- =====================================================
+       END GALLERY SECTION v2
+  ===================================================== -->
+
+
+
+
+<!-- =====================================================
+       WHAT WE DO / SERVICES SECTION v2
+       Slot after closing </section> of #gallery in index_v2.html
+  ===================================================== -->
+  <section id="services" aria-label="What We Do">
+
+    <!-- ── Section intro ── -->
+    <div class="svc-intro">
+      <p class="svc-intro-eyebrow">What We Do</p>
+      <h2 class="svc-intro-headline">
+        <span class="svc-hl-wrap"><span class="svc-hl-line">Five reasons</span></span>
+        <span class="svc-hl-wrap"><span class="svc-hl-line svc-italic">to come in.</span></span>
+      </h2>
+    </div>
+
+    <!-- ================================================================
+         ACCORDION — all five categories, one scroll
+    ================================================================ -->
+    <div id="svc-accordion">
+
+      <!-- 01 — Homemade Gelato -->
+      <div class="svc-acc-item" id="svc-gelato">
+        <button class="svc-acc-row" aria-expanded="false">
+          <span class="svc-num">01</span>
+          <span class="svc-acc-label">Homemade Gelato</span>
+          <span class="svc-acc-sub">Made cold. By hand. Every morning.</span>
+          <span class="svc-acc-icon"><svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="svc-acc-panel">
+          <div class="svc-acc-content">
+            <div class="svc-acc-text">
+              <h3 class="svc-headline">Made cold.<br/><em>By hand.</em><br/>Every morning.</h3>
+              <p class="svc-body">We started with one freezer and a single conviction — that gelato made from real ingredients, in small batches, tastes completely different. It still does. Single-origin chocolate. Madagascan vanilla. Strawberries pressed the same morning they are served.</p>
+              <div class="svc-detail-row">
+                <span class="svc-detail-item">Small batch</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Hand-spun daily</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Single-origin</span>
+              </div>
+            </div>
+            <div class="svc-acc-img">
+              <img src="./images/gal12.png" alt="Homemade Gelato" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 — Desserts -->
+      <div class="svc-acc-item" id="svc-desserts">
+        <button class="svc-acc-row" aria-expanded="false">
+          <span class="svc-num">02</span>
+          <span class="svc-acc-label">Desserts</span>
+          <span class="svc-acc-sub">The drip. The stack. The scoop.</span>
+          <span class="svc-acc-icon"><svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="svc-acc-panel">
+          <div class="svc-acc-content">
+            <div class="svc-acc-text">
+              <h3 class="svc-headline">The drip.<br/><em>The stack.</em><br/>The scoop.</h3>
+              <p class="svc-body">Biscoff pancakes. Chocolate-drip waffles. Freakshakes tall enough to photograph. Everything on the dessert menu is made to be the best part of your day — and we take that seriously.</p>
+              <div class="svc-detail-row">
+                <span class="svc-detail-item">Waffles</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Pancakes</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Freakshakes</span>
+              </div>
+            </div>
+            <div class="svc-acc-img">
+              <img src="./images/men15.JPEG" alt="Desserts" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 — Coffee -->
+      <div class="svc-acc-item" id="svc-coffee">
+        <button class="svc-acc-row" aria-expanded="false">
+          <span class="svc-num">03</span>
+          <span class="svc-acc-label">Coffee</span>
+          <span class="svc-acc-sub">Quiet mornings. Good coffee.</span>
+          <span class="svc-acc-icon"><svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="svc-acc-panel">
+          <div class="svc-acc-content">
+            <div class="svc-acc-text">
+              <h3 class="svc-headline">Quiet mornings.<br/><em>Good coffee.</em><br/>Nothing complicated.</h3>
+              <p class="svc-body">Cappuccinos pulled properly. Americanos long and clean. Espresso the way it is supposed to taste. We do not rush the coffee, and neither should you.</p>
+              <div class="svc-detail-row">
+                <span class="svc-detail-item">Espresso</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Cappuccino</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Cold brew</span>
+              </div>
+            </div>
+            <div class="svc-acc-img">
+              <img src="./images/g1.PNG" alt="Coffee" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 — Food -->
+      <div class="svc-acc-item" id="svc-food">
+        <button class="svc-acc-row" aria-expanded="false">
+          <span class="svc-num">04</span>
+          <span class="svc-acc-label">Food</span>
+          <span class="svc-acc-sub">Breakfast to dinner. Made with care.</span>
+          <span class="svc-acc-icon"><svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="svc-acc-panel">
+          <div class="svc-acc-content">
+            <div class="svc-acc-text">
+              <h3 class="svc-headline">Breakfast<br/><em>to dinner.</em><br/>Made with care.</h3>
+              <p class="svc-body">Lebanese labneh sandwiches at 9am. Beef burgers at lunch. Spaghetti and meatballs when the afternoon stretches long. The menu is short because everything on it is made right.</p>
+              <div class="svc-detail-row">
+                <span class="svc-detail-item">Breakfast</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Lunch</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Dinner</span>
+              </div>
+            </div>
+            <div class="svc-acc-img">
+              <img src="./images/gal9.png" alt="Food" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — Social Events -->
+      <div class="svc-acc-item" id="svc-events">
+        <button class="svc-acc-row" aria-expanded="false">
+          <span class="svc-num">05</span>
+          <span class="svc-acc-label">Social Events</span>
+          <span class="svc-acc-sub">Your next event. Our table.</span>
+          <span class="svc-acc-icon"><svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="svc-acc-panel">
+          <div class="svc-acc-content">
+            <div class="svc-acc-text">
+              <h3 class="svc-headline">Your next event.<br/><em>Our table.</em></h3>
+              <p class="svc-body">Birthday dinners. Corporate lunches. Baby showers with gelato instead of cake — because why not. We host private and group events at Frozen Spoon, and we put the same care into the experience as we do into everything on the menu.</p>
+              <div class="svc-detail-row">
+                <span class="svc-detail-item">Private dining</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Corporate</span>
+                <span class="svc-detail-dot">·</span>
+                <span class="svc-detail-item">Celebrations</span>
+              </div>
+              <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="svc-cta">Enquire about events &rarr;</a>
+            </div>
+            <div class="svc-acc-img">
+              <img src="./images/se.jpeg" alt="Social Events" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /svc-accordion -->
+
+  </section>
+  <!-- =====================================================
+       END WHAT WE DO / SERVICES SECTION v2
+  ===================================================== -->
+
+
+
+
+  <!-- =====================================================
+       CONTACT / RESERVATION SECTION v2
+       Slot after closing </section> of #services in index_v2.html
+  ===================================================== -->
+  <section id="contact" aria-label="Contact and Reservations">
+
+    <!-- ── Section header ── -->
+    <div class="ct-header">
+      <p class="ct-eyebrow">Find Us · Reserve · Connect</p>
+      <h2 class="ct-headline">
+        <span class="ct-hl-wrap"><span class="ct-hl-line">Come find</span></span>
+        <span class="ct-hl-wrap"><span class="ct-hl-line ct-italic">Us.</span></span>
+      </h2>
+    </div>
+
+    <!-- ── Google Maps embed ── -->
+    <!-- Clicking the overlay opens Google Maps to the exact location -->
+    <div id="ct-map-wrap">
+      <iframe
+        id="ct-map-iframe"
+        src="https://maps.google.com/maps?q=Kass+Towers,+15+Senchi+Street,+Airport+Residential,+Accra,+Ghana&z=17&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Frozen Spoon location"
+        aria-label="Google Maps showing Frozen Spoon location"
+      ></iframe>
+      <!-- Clickable overlay — opens Google Maps -->
+      <a
+        href="https://maps.google.com/?q=Kass+Towers,+15+Senchi+Street,+Airport+Residential,+Accra,+Ghana"
+        target="_blank"
+        rel="noopener"
+        id="ct-map-overlay"
+        aria-label="Open in Google Maps"
+      >
+        <div class="ct-map-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Open in Google Maps &rarr;
+        </div>
+      </a>
+    </div>
+
+    <!-- ── Address bar below map ── -->
+    <div id="ct-address-bar">
+      <div class="ct-address-item">
+        <svg class="ct-addr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>Kass Towers, 15 Senchi Street, Airport Residential, Accra</span>
+      </div>
+      <div class="ct-address-sep"></div>
+      <div class="ct-address-item">
+        <svg class="ct-addr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Mon – Sat: 7:00am – 11pm &nbsp;·&nbsp; Sun: 2:00pm – 11pm</span>
+      </div>
+      <div class="ct-address-sep"></div>
+      <div class="ct-address-item">
+        <svg class="ct-addr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.18 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.12.96.36 1.9.72 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.36 1.85.6 2.81.72A2 2 0 0122 14.92z"/>
+        </svg>
+        <span>+233 55 738 8773</span>
+      </div>
+    </div>
+
+    <!-- ── Main body: form + info ── -->
+    <div id="ct-body">
+
+      <!-- LEFT: Reservation form -->
+      <div id="ct-form-col">
+        <p class="ct-col-eyebrow">Make a Reservation</p>
+        <h3 class="ct-col-headline">Book your<br/><em>table.</em></h3>
+        <p class="ct-col-sub">
+          Fill in your details and we will send your reservation
+          directly to our team on WhatsApp. We will confirm within
+          a few minutes.
+        </p>
+
+        <form id="reservation-form" novalidate>
+
+          <div class="rf-row">
+            <div class="rf-field">
+              <label for="rf-name">Your name</label>
+              <input
+                type="text"
+                id="rf-name"
+                name="name"
+                placeholder="e.g. Ama Osei"
+                autocomplete="name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="rf-row rf-row-2">
+            <div class="rf-field">
+              <label for="rf-date">Date</label>
+              <input
+                type="date"
+                id="rf-date"
+                name="date"
+                required
+              />
+            </div>
+            <div class="rf-field">
+              <label for="rf-time">Time</label>
+              <input
+                type="time"
+                id="rf-time"
+                name="time"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="rf-row">
+            <div class="rf-field">
+              <label for="rf-party">Party size</label>
+              <select id="rf-party" name="party" required>
+                <option value="" disabled selected>How many guests?</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5">5 people</option>
+                <option value="6">6 people</option>
+                <option value="7+">7 or more</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="rf-row">
+            <div class="rf-field">
+              <label for="rf-notes">Any special requests?</label>
+              <textarea
+                id="rf-notes"
+                name="notes"
+                placeholder="e.g. Birthday dinner, dietary requirements, high chair needed..."
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+
+          <button type="submit" id="rf-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+            </svg>
+            Reserve via WhatsApp
+          </button>
+
+          <p class="rf-note">
+            We will confirm your reservation directly on WhatsApp.
+            No account or payment needed.
+          </p>
+
+        </form>
+      </div><!-- /ct-form-col -->
+
+      <!-- RIGHT: Contact info -->
+      <div id="ct-info-col">
+        <p class="ct-col-eyebrow">Get in Touch</p>
+        <h3 class="ct-col-headline">We are<br/><em>here for you.</em></h3>
+
+        <!-- Info blocks -->
+        <div class="ct-info-blocks">
+
+          <div class="ct-info-block">
+            <p class="ct-info-label">Location</p>
+            <p class="ct-info-val">
+              Kass Towers, 15 Senchi Street<br/>
+              Airport Residential, Accra, Ghana
+            </p>
+            <a
+              href="https://maps.google.com/?q=Kass+Towers,+15+Senchi+Street,+Airport+Residential,+Accra,+Ghana"
+              target="_blank"
+              rel="noopener"
+              class="ct-info-link"
+            >Get directions &rarr;</a>
+          </div>
+
+          <div class="ct-info-block">
+            <p class="ct-info-label">Opening Hours</p>
+            <div class="ct-hours">
+              <div class="ct-hours-row">
+                <span>Monday – Saturday</span>
+                <span>7:00am – 11:00pm</span>
+              </div>
+              <div class="ct-hours-row">
+                <span>Sunday</span>
+                <span>2:00pm – 11:00pm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ct-info-block">
+            <p class="ct-info-label">Order &amp; Delivery</p>
+            <a href="https://wa.me/233557388773" target="_blank" rel="noopener" class="ct-info-link ct-wa-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+              +233 55 738 8773
+            </a>
+            <p class="ct-info-sub">Message us on WhatsApp to order</p>
+          </div>
+
+          <div class="ct-info-block">
+            <p class="ct-info-label">Follow Us</p>
+            <div class="ct-socials">
+
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/frozenspoon_gh/"
+                target="_blank" rel="noopener"
+                class="ct-social-link"
+                aria-label="Instagram"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                <span>@frozenspoon_gh</span>
+              </a>
+
+              <!-- TikTok -->
+              <a
+                href="https://www.tiktok.com/search?q=frozen%20spoon&t=1778704087109"
+                target="_blank" rel="noopener"
+                class="ct-social-link"
+                aria-label="TikTok"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                </svg>
+                <span>TikTok</span>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/233557388773"
+                target="_blank" rel="noopener"
+                class="ct-social-link"
+                aria-label="WhatsApp"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div><!-- /ct-info-blocks -->
+
+      </div><!-- /ct-info-col -->
+
+    </div><!-- /ct-body -->
+
+  </section>
+  <!-- =====================================================
+       END CONTACT / RESERVATION SECTION v2
+  ===================================================== -->
+
+
+<!-- ============================================================
+     TESTIMONIALS SECTION — real social proof
+============================================================ -->
+<section id="testimonials" aria-label="What they're saying">
+
+  <!-- Header -->
+  <div class="tsm-header">
+    <p class="tsm-eyebrow">
+      <!-- Instagram -->
+      <svg class="tsm-plat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig-grad)" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="url(#ig-grad)" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-grad)"/><defs><linearGradient id="ig-grad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+      <!-- TikTok -->
+      <svg class="tsm-plat-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+      <!-- Google G -->
+      <svg class="tsm-plat-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      Instagram · TikTok · Google
+    </p>
+    <h2 class="tsm-headline">Don't just take<br/><em>our word for it.</em></h2>
+    <p class="tsm-rating-line">
+      <span class="tsm-stars-big">★★★★½</span>
+      <span class="tsm-rating-text">4.5 · Reviews across all our platforms</span>
+    </p>
+  </div>
+
+  <!-- Feed — 3 scrolling columns -->
+  <div class="tsm-feed" aria-hidden="true">
+
+    <!-- ── Column 1 ── -->
+    <div class="tsm-col">
+      <div class="tsm-col-inner" style="--speed:38s">
+
+        <!-- IG: sumiee_x -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">S</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@__sumiee_x</span>
+              <span class="tsm-sub-label">Instagram</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig2)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig2)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig2)"/><defs><linearGradient id="ig2" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Juiciest burger ever 🤤</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">12w</span></div>
+        </div>
+
+        <!-- Google: Cedar Tree -->
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#4285f4">C</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">Cedar Tree</span>
+              <span class="tsm-goog-stars">★★★★★</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">Best ice cream I've tasted so far. Serene environment. And great customer service. And the owner has the warmest smile ❤️</p>
+          <div class="tsm-card-foot tsm-age">3 years ago</div>
+        </div>
+
+        <!-- TikTok: lastic -->
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#2a2a2a">L</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@lastic</span>
+              <span class="tsm-sub-label">TikTok</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">great customer service always!</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+
+        <!-- IG: drchiedzaikpeh -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#9c27b0">D</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@drchiedzaikpeh</span>
+              <span class="tsm-sub-label">Instagram</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig3)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig3)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig3)"/><defs><linearGradient id="ig3" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Omggggg count me in! 🥳🎉</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 7</span><span class="tsm-age">4w</span></div>
+        </div>
+
+        <!-- duplicate for seamless loop -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">S</div>
+            <div class="tsm-user-block"><span class="tsm-username">@__sumiee_x</span><span class="tsm-sub-label">Instagram</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig2b)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig2b)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig2b)"/><defs><linearGradient id="ig2b" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Juiciest burger ever 🤤</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">12w</span></div>
+        </div>
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#4285f4">C</div>
+            <div class="tsm-user-block"><span class="tsm-username">Cedar Tree</span><span class="tsm-goog-stars">★★★★★</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">Best ice cream I've tasted so far. Serene environment. And great customer service. And the owner has the warmest smile ❤️</p>
+          <div class="tsm-card-foot tsm-age">3 years ago</div>
+        </div>
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#2a2a2a">L</div>
+            <div class="tsm-user-block"><span class="tsm-username">@lastic</span><span class="tsm-sub-label">TikTok</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">great customer service always!</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#9c27b0">D</div>
+            <div class="tsm-user-block"><span class="tsm-username">@drchiedzaikpeh</span><span class="tsm-sub-label">Instagram</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig3b)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig3b)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig3b)"/><defs><linearGradient id="ig3b" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Omggggg count me in! 🥳🎉</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 7</span><span class="tsm-age">4w</span></div>
+        </div>
+
+      </div><!-- /tsm-col-inner -->
+    </div><!-- /col 1 -->
+
+    <!-- ── Column 2 ── -->
+    <div class="tsm-col">
+      <div class="tsm-col-inner" style="--speed:28s; --delay:-8s">
+
+        <!-- Google: Sandra -->
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">S</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">Sandra W. Gyansah</span>
+              <span class="tsm-goog-stars">★★★★★</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">Absolutely loved their freak shakes. Place is cozy and ambience is great. They have an outdoor set up that complements it perfectly.</p>
+          <div class="tsm-card-foot tsm-age">3 years ago</div>
+        </div>
+
+        <!-- TikTok: joy_gh -->
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#333">J</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@joy_gh ❤️🥰</span>
+              <span class="tsm-sub-label">TikTok</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">I love 💕 their environment 🤩🤩🤩</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡</span></div>
+        </div>
+
+        <!-- IG: karensdesserthaven -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#f9a825">K</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@karensdesserthaven</span>
+              <span class="tsm-sub-label">Instagram</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig4)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig4)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig4)"/><defs><linearGradient id="ig4" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">So beautiful 😍😍😍</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">57w</span></div>
+        </div>
+
+        <!-- Google: Florence -->
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#34a853">F</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">Florence A. Dadzie</span>
+              <span class="tsm-goog-stars">★★★★<span style="color:#ccc">★</span></span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">For the sweet tooth and dessert lovers, frozen spoon has a couple of exciting options. From milkshakes to crepes, pancakes, waffles, ice cream and combination offers. Great location and very good customer service.</p>
+          <div class="tsm-card-foot tsm-age">Local Guide · 5 years ago</div>
+        </div>
+
+        <!-- duplicates -->
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">S</div>
+            <div class="tsm-user-block"><span class="tsm-username">Sandra W. Gyansah</span><span class="tsm-goog-stars">★★★★★</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">Absolutely loved their freak shakes. Place is cozy and ambience is great. They have an outdoor set up that complements it perfectly.</p>
+          <div class="tsm-card-foot tsm-age">3 years ago</div>
+        </div>
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#333">J</div>
+            <div class="tsm-user-block"><span class="tsm-username">@joy_gh ❤️🥰</span><span class="tsm-sub-label">TikTok</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">I love 💕 their environment 🤩🤩🤩</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡</span></div>
+        </div>
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#f9a825">K</div>
+            <div class="tsm-user-block"><span class="tsm-username">@karensdesserthaven</span><span class="tsm-sub-label">Instagram</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig4b)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig4b)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig4b)"/><defs><linearGradient id="ig4b" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">So beautiful 😍😍😍</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">57w</span></div>
+        </div>
+        <div class="tsm-card tsm-goog">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#34a853">F</div>
+            <div class="tsm-user-block"><span class="tsm-username">Florence A. Dadzie</span><span class="tsm-goog-stars">★★★★<span style="color:#ccc">★</span></span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <p class="tsm-text">For the sweet tooth and dessert lovers, frozen spoon has a couple of exciting options. From milkshakes to crepes, pancakes, waffles, ice cream and combination offers. Great location and very good customer service.</p>
+          <div class="tsm-card-foot tsm-age">Local Guide · 5 years ago</div>
+        </div>
+
+      </div>
+    </div><!-- /col 2 -->
+
+    <!-- ── Column 3 ── -->
+    <div class="tsm-col">
+      <div class="tsm-col-inner" style="--speed:32s; --delay:-14s">
+
+        <!-- TikTok: t0yy3s3 -->
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#555">T</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@t0yy3s3</span>
+              <span class="tsm-sub-label">TikTok</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">😍😍😍</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+
+        <!-- IG: food_ambassador_gh -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">F</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@food_ambassador_gh</span>
+              <span class="tsm-sub-label">Instagram</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig5)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig5)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig5)"/><defs><linearGradient id="ig5" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">I want to try this 🤩</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">158w</span></div>
+        </div>
+
+        <!-- TikTok: ChrisTwity -->
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#e8608a">C</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@ChrisTwity</span>
+              <span class="tsm-sub-label">TikTok</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">wow</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+
+        <!-- IG: yinpasiyaa -->
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#9c27b0">Y</div>
+            <div class="tsm-user-block">
+              <span class="tsm-username">@yinpasiyaa</span>
+              <span class="tsm-sub-label">Instagram</span>
+            </div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig6)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig6)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig6)"/><defs><linearGradient id="ig6" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Awwiesss</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">12w</span></div>
+        </div>
+
+        <!-- duplicates -->
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#555">T</div>
+            <div class="tsm-user-block"><span class="tsm-username">@t0yy3s3</span><span class="tsm-sub-label">TikTok</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">😍😍😍</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#e8608a">F</div>
+            <div class="tsm-user-block"><span class="tsm-username">@food_ambassador_gh</span><span class="tsm-sub-label">Instagram</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig5b)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig5b)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig5b)"/><defs><linearGradient id="ig5b" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">I want to try this 🤩</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">158w</span></div>
+        </div>
+        <div class="tsm-card tsm-tt">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar tsm-avatar-tt" style="background:#e8608a">C</div>
+            <div class="tsm-user-block"><span class="tsm-username">@ChrisTwity</span><span class="tsm-sub-label">TikTok</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+          </div>
+          <p class="tsm-text">wow</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">♡ 1</span></div>
+        </div>
+        <div class="tsm-card tsm-ig">
+          <div class="tsm-card-top">
+            <div class="tsm-avatar" style="background:#9c27b0">Y</div>
+            <div class="tsm-user-block"><span class="tsm-username">@yinpasiyaa</span><span class="tsm-sub-label">Instagram</span></div>
+            <svg class="tsm-badge" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig6b)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="url(#ig6b)" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="url(#ig6b)"/><defs><linearGradient id="ig6b" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a825"/><stop offset=".5" stop-color="#e8608a"/><stop offset="1" stop-color="#9c27b0"/></linearGradient></defs></svg>
+          </div>
+          <p class="tsm-text">Awwiesss</p>
+          <div class="tsm-card-foot"><span class="tsm-likes">❤ 1</span><span class="tsm-age">12w</span></div>
+        </div>
+
+      </div>
+    </div><!-- /col 3 -->
+
+  </div><!-- /tsm-feed -->
+
+  <!-- fade edges -->
+  <div class="tsm-fade-top"></div>
+  <div class="tsm-fade-bot"></div>
+
+</section>
+<!-- ============================================================
+     END TESTIMONIALS SECTION
+============================================================ -->
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+
+  <!-- Top brand strip -->
+  <div class="ft-brand">
+    <a href="#" aria-label="Frozen Spoon home" class="ft-logo-link">
+      <img src="logo.png" alt="Frozen Spoon Cafe and Gelato" class="ft-logo"/>
+    </a>
+    <p class="ft-tagline">
+      <span class="ft-tag-line ft-tag-l1">
+        <em class="ft-tag-word ft-tag-white">Start</em>
+        <em class="ft-tag-word ft-tag-dim"> with the </em>
+        <em class="ft-tag-word ft-tag-pink">coffee,</em>
+      </span>
+      <span class="ft-tag-line ft-tag-l2">
+        <em class="ft-tag-word ft-tag-dim">Linger over the </em>
+        <em class="ft-tag-word ft-tag-yellow">food,</em>
+      </span>
+      <span class="ft-tag-line ft-tag-l3">
+        <em class="ft-tag-word ft-tag-dim">and stay for </em>
+        <em class="ft-tag-word ft-tag-pink">dessert </em>
+        <em class="ft-tag-word ft-tag-yellow">magic.</em>
+      </span>
+    </p>
+  </div>
+
+  <div class="ft-rule"></div>
+
+  <!-- Main grid -->
+  <div class="ft-grid">
+
+    <!-- Col 1: About blurb -->
+    <div class="ft-col ft-col-about">
+      <p class="ft-about-text">A cozy cafe and gelato shop in the heart of Accra. Made fresh, served cold, shared with love.</p>
+      <div class="ft-socials">
+        <a href="https://instagram.com/frozenspoon_gh" target="_blank" rel="noopener" class="ft-social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://tiktok.com/@frozenspoon" target="_blank" rel="noopener" class="ft-social-btn" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
+        </a>
+        <a href="tel:+233557388773" class="ft-social-btn" aria-label="Call us">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.85 10.7a19.79 19.79 0 01-3.07-8.67A2 2 0 012.75 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 2: Explore nav -->
+    <div class="ft-col">
+      <h4 class="ft-col-head">Explore</h4>
+      <ul class="ft-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Visit -->
+    <div class="ft-col">
+      <h4 class="ft-col-head">Visit Us</h4>
+      <address class="ft-address">
+        Kass Towers, 15 Senchi Street<br/>
+        Airport Residential<br/>
+        Accra, Ghana
+      </address>
+      <a href="https://maps.google.com/maps?q=Kass+Towers,+15+Senchi+Street,+Airport+Residential,+Accra,+Ghana" target="_blank" rel="noopener" class="ft-map-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Get directions
+      </a>
+    </div>
+
+    <!-- Col 4: Hours + CTA -->
+    <div class="ft-col">
+      <h4 class="ft-col-head">Hours</h4>
+      <div class="ft-hours">
+        <div class="ft-hours-row">
+          <span>Mon – Sat</span>
+          <span>7:00am – 11:00pm</span>
+        </div>
+        <div class="ft-hours-row">
+          <span>Sunday</span>
+          <span>2:00pm – 11:00pm</span>
+        </div>
+      </div>
+      <a href="#contact" class="ft-cta">
+        Make a Reservation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="ft-bottom">
+    <p class="ft-copy">© 2026 Frozen Spoon Cafe and Gelato. All rights reserved.</p>
+    <p class="ft-made">Made with love in Accra, Ghana 🇬🇭</p>
+  </div>
+
+</footer>
+<!-- ============================================================
+     END FOOTER
+============================================================ -->
+
+<script src="script.js"></script>
+</body>
+</html>
