@@ -3,10 +3,84 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frozen Spoon — Cafe &amp; Gelato</title>
+  <title>Frozen Spoon — Cafe &amp; Gelato · Accra, Ghana</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Frozen Spoon is Accra's favourite café and gelato destination. Handcrafted gelato, specialty coffee, waffles, pancakes, burgers and more — at Kass Towers, Airport Residential."/>
+  <meta name="keywords" content="Frozen Spoon, cafe Accra, gelato Accra, waffles Accra, coffee Airport Residential, freakshakes Ghana, best cafe Ghana"/>
+  <meta name="author" content="Frozen Spoon Cafe &amp; Gelato"/>
+  <link rel="canonical" href="https://frozenspoon.vercel.app/"/>
+  <link rel="preload" as="image" href="./images/h2.webp" type="image/webp"/>
+
+  <!-- Open Graph / Facebook / WhatsApp preview -->
+  <meta property="og:type" content="restaurant"/>
+  <meta property="og:url" content="https://frozenspoon.vercel.app/"/>
+  <meta property="og:title" content="Frozen Spoon — Cafe &amp; Gelato · Accra"/>
+  <meta property="og:description" content="Handcrafted gelato, specialty coffee, waffles, pancakes &amp; burgers in Airport Residential, Accra. Come in. Stay a while."/>
+  <meta property="og:image" content="https://frozenspoon.vercel.app/images/h2.webp"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="en_GH"/>
+  <meta property="og:site_name" content="Frozen Spoon"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Frozen Spoon — Cafe &amp; Gelato · Accra"/>
+  <meta name="twitter:description" content="Handcrafted gelato, specialty coffee, waffles &amp; burgers in Airport Residential, Accra."/>
+  <meta name="twitter:image" content="https://frozenspoon.vercel.app/images/h2.webp"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./logo.png"/>
+  <link rel="apple-touch-icon" href="./logo.png"/>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Frozen Spoon Cafe & Gelato",
+    "url": "https://frozenspoon.vercel.app",
+    "logo": "https://frozenspoon.vercel.app/logo.png",
+    "image": "https://frozenspoon.vercel.app/images/h2.webp",
+    "description": "Handcrafted gelato, specialty coffee, waffles, pancakes and burgers in Airport Residential, Accra, Ghana.",
+    "telephone": "+233557388773",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kass Towers, 15 Senchi Street",
+      "addressLocality": "Airport Residential",
+      "addressRegion": "Greater Accra",
+      "addressCountry": "GH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 5.6056,
+      "longitude": -0.1817
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "22:00"
+      }
+    ],
+    "servesCuisine": ["Gelato","Coffee","Waffles","Burgers","Sandwiches"],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.instagram.com/frozenspoon.gh"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@1,400;1,700&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="style.css"/>
@@ -85,14 +159,14 @@
     <div class="hero-slide active" data-slide="1" data-style="bottom-bold">
       <div class="slide-bg">
         <!-- Replace with your food image -->
-        <img src="./images/h2.JPEG" alt="Slide 1" class="slide-img" data-zoom="in"/>
+        <img src="./images/h2.webp" alt="Frozen Spoon cafe food" class="slide-img" data-zoom="in" loading="eager" fetchpriority="high"/>
         <div class="slide-vignette slide-vignette-bottom"></div>
       </div>
       <div class="slide-content sc-bottom-left">
         <p class="sc-eyebrow">Cafe &amp; Gelato · Accra</p>
         <h2 class="sc-headline sc-headline-chunky">
-          <span class="sc-line">Soft.</span>
-          <span class="sc-line">Sweet.</span>
+          <span class="sc-line">Creamy.</span>
+          <span class="sc-line">Delicious.</span>
           <span class="sc-line">Exact.</span>
         </h2>
         <!-- <p class="sc-body">Made by hand. Served before it settles.</p> -->
@@ -102,7 +176,7 @@
     <!-- ─── SLIDE 2: Split screen ─── -->
     <div class="hero-slide" data-slide="2" data-style="split">
       <div class="slide-bg">
-        <img src="./images/h8.JPEG" alt="Slide 2" class="slide-img" data-zoom="gentle"/>
+        <img src="./images/h8.webp" alt="Frozen Spoon kitchen - made fresh always" class="slide-img" loading="lazy" data-zoom="gentle"/>
         <div class="slide-vignette slide-vignette-right"></div>
       </div>
       <div class="slide-content sc-split-panel">
@@ -122,7 +196,7 @@
     <!-- ─── SLIDE 3: Script + massive bold center ─── -->
     <div class="hero-slide" data-slide="3" data-style="center-bold">
       <div class="slide-bg">
-        <img src="./images/h11.png" alt="Slide 3" class="slide-img" data-zoom="out"/>
+        <img src="./images/h11.webp" alt="Handcrafted gelato at Frozen Spoon" class="slide-img" loading="lazy" data-zoom="out"/>
         <div class="slide-vignette slide-vignette-full"></div>
       </div>
       <div class="slide-content sc-center">
@@ -136,7 +210,7 @@
     <!-- ─── SLIDE 4: Frosted glass card ─── -->
     <div class="hero-slide" data-slide="4" data-style="glass-card">
       <div class="slide-bg">
-        <img src="./images/h10.jpeg" alt="Slide 4" class="slide-img" data-zoom="drift"/>
+        <img src="./images/h10.webp" alt="Fresh food platter at Frozen Spoon" class="slide-img" loading="lazy" data-zoom="drift"/>
         <div class="slide-vignette slide-vignette-light"></div>
       </div>
       <div class="slide-content sc-glass-wrap">
@@ -166,7 +240,7 @@
     <!-- ─── SLIDE 5: Bottom caption, luxury minimal ─── -->
     <div class="hero-slide" data-slide="5" data-style="minimal-caption">
       <div class="slide-bg">
-        <img src="./images/h5.png" alt="Slide 5" class="slide-img" data-zoom="in"/>
+        <img src="./images/h5.webp" alt="Frozen Spoon Cafe Accra" class="slide-img" loading="lazy" data-zoom="in"/>
         <div class="slide-vignette slide-vignette-bottom-heavy"></div>
       </div>
       <div class="slide-content sc-caption-bottom">
@@ -276,7 +350,7 @@
         </div>
       </div>
       <div class="ab-img-wrap ab-img-landscape">
-        <img src="./images/sty.png" alt="The Frozen Spoon kitchen"/>
+        <img src="./images/sty.webp" alt="The Frozen Spoon kitchen"/>
         <div class="ab-img-quote">&ldquo;Made by hand.<br/>Always.&rdquo;</div>
       </div>
     </div>
@@ -299,15 +373,15 @@
       <div class="ab-img-wrap ab-img-collage">
         <!-- ftv1: tall portrait, left column 45% -->
         <div class="ab-collage-main">
-          <img src="./images/ftv1.png" alt="The Frozen Spoon space"/>
+          <img src="./images/ftv1.webp" alt="The Frozen Spoon space"/>
           <span class="ab-collage-word">Warm.</span>
         </div>
         <!-- ftv2 + ftv3: stacked right column 40% -->
         <div class="ab-collage-sec ab-collage-sec-a">
-          <img src="./images/ftv2.png" alt="The atmosphere"/>
+          <img src="./images/ftv2.webp" alt="The atmosphere"/>
         </div>
         <div class="ab-collage-sec ab-collage-sec-b">
-          <img src="./images/ftv3.png" alt="The vibe"/>
+          <img src="./images/ftv3.webp" alt="The vibe"/>
           <span class="ab-collage-word">Yours.</span>
         </div>
       </div>
@@ -329,21 +403,15 @@
   ===================================================== -->
   <section id="menu" aria-label="Menu">
 
-    <!-- ── FULL BLEED HERO BANNER ── -->
-    <div id="menu-hero-banner">
-      <img
-        src="./images/h3.JPEG"
-        alt="Frozen Spoon food spread"
-        id="menu-hero-img"
-      />
-      <div id="menu-hero-overlay"></div>
-      <div id="menu-hero-text">
-        <h2 class="mh-big-title"><em>Menu</em></h2>
-      </div>
-      <!-- Scroll cue -->
-      <div id="menu-scroll-cue">
-        <span class="msc-line"></span>
-        <span class="msc-label">Explore</span>
+    <!-- ── MENU TYPOGRAPHIC HEADER ── -->
+    <div id="menu-header">
+      <div class="mhdr-inner">
+        <h2 class="mhdr-title"><em>Menu</em></h2>
+        <div class="mhdr-rule">
+          <span class="mhdr-rule-line mhdr-rule-left"></span>
+          <span class="mhdr-rule-diamond"></span>
+          <span class="mhdr-rule-line mhdr-rule-right"></span>
+        </div>
       </div>
     </div>
 
@@ -585,180 +653,49 @@
 
     <!-- ── Section header ── -->
     <div class="gal-header">
-      <p class="gal-eyebrow">Our Kitchen. Our Craft.</p>
+      <p class="gal-eyebrow"> Our Craft.</p>
       <h2 class="gal-headline">
-        <span class="gal-hl-wrap"><span class="gal-hl-line">From our</span></span>
-        <span class="gal-hl-wrap"><span class="gal-hl-line gal-italic">kitchen.</span></span>
+        <span class="gal-hl-wrap"><span class="gal-hl-line">Our</span></span>
+        <span class="gal-hl-wrap"><span class="gal-hl-line gal-italic">Gallery.</span></span>
       </h2>
-      <p class="gal-sub">@frozenspoon_gh</p>
     </div>
 
     <!-- ── The Grid ── -->
-    <!-- Layout: 4 columns. Some cards span 2 cols for featured moments.
-         To swap images: replace the src on any <img> below.
-         Recommended: use your actual Instagram food shots.
-         All images are currently Unsplash placeholders.              -->
     <div id="gallery-grid">
 
-      <!-- Row 1: featured (2-col) + two regulars -->
-
-      <div class="gal-card gal-span-2 gal-tall" data-index="1">
-        <!-- FEATURED: best hero shot — ice cream drip or waffle -->
-        <img src="./images/sty.png" alt="Gallery 1" loading="lazy"/>
+      <!-- Row 1 (hero height): large featured (2-col) + 2 squares -->
+      <div class="gal-card gal-span-2" data-index="1">
+        <img src="./images/sty.webp" alt="Gallery 1" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+      <div class="gal-card" data-index="2">
+        <img src="./images/men24.webp" alt="Gallery 2" loading="lazy"/>
+        <div class="gal-card-overlay"></div>
+      </div>
+      <div class="gal-card" data-index="3">
+        <img src="./images/g1.webp" alt="Gallery 3" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
 
-      <div class="gal-card gal-square" data-index="2">
-        <!-- Waffle shot -->
-        <img src="./images/men24.png" alt="Gallery 2" loading="lazy"/>
+      <!-- Rows 2-3: 2 squares + 2 portrait tall cards + 1 wide featured -->
+      <div class="gal-card" data-index="4">
+        <img src="./images/gal4.webp" alt="Gallery 4" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
-
-      <div class="gal-card gal-square" data-index="3">
-        <!-- Pancake stack -->
-        <img src="./images/g1.PNG" alt="Gallery 3" loading="lazy"/>
+      <div class="gal-card" data-index="5">
+        <img src="./images/gal10.webp" alt="Gallery 5" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
-
-      <!-- Row 2: four regulars -->
-
-      <div class="gal-card gal-square" data-index="4">
-        <!-- Coffee / drinks -->
-        <img src="./images/h8.JPEG" alt="Gallery 4" loading="lazy"/>
+      <div class="gal-card gal-portrait" data-index="6">
+        <img src="./images/gal8.webp" alt="Gallery 6" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
-
-      <div class="gal-card gal-square" data-index="5">
-        <!-- Burger -->
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=600&fit=crop&q=85" alt="Gallery 5" loading="lazy"/>
+      <div class="gal-card gal-portrait" data-index="7">
+        <img src="./images/gal14.webp" alt="Gallery 7" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
-
-      <div class="gal-card gal-span-2 gal-square" data-index="6">
-        <!-- FEATURED: gelato tray / spreads shot -->
-        <img src="./images/gal2.JPEG" alt="Gallery 6" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 3: two regulars + featured (2-col) -->
-
-      <div class="gal-card gal-square" data-index="7">
-        <!-- Smoothie / juice -->
-        <img src="./images/gal3.png" alt="Gallery 7" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="8">
-        <!-- Sandwich / breakfast -->
-        <img src="./images/gal4.png" alt="Gallery 8" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="9">
-        <!-- Ice cream scoop -->
-        <img src="./images/men11.jpeg" alt="Gallery 9" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="10">
-        <!-- Freakshake -->
-        <img src="./images/men21.JPEG" alt="Gallery 10" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 4: featured tall (2-col) + stack of 2 -->
-
-      <div class="gal-card gal-span-2 gal-tall" data-index="11">
-        <!-- FEATURED: overhead food spread -->
-        <img src="./images/gal5.png" alt="Gallery 11" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="12">
-        <!-- Coffee latte art -->
-        <img src="./images/gal6.png" alt="Gallery 12" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="13">
-        <!-- Salad / fresh -->
-        <img src="./images/h7.png" alt="Gallery 13" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 5: three across the bottom -->
-
-      <div class="gal-card gal-rect" data-index="14">
-        <!-- Pasta / mains -->
-        <img src="./images/gal7.JPEG" alt="Gallery 14" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-rect" data-index="15">
-        <!-- Chocolate dessert -->
-        <img src="./images/men23.jpeg" alt="Gallery 15" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-rect" data-index="16">
-        <!-- Drinks / tea -->
-        <img src="./images/men4.png" alt="Gallery 16" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 6: 4 squares -->
-
-      <div class="gal-card gal-square" data-index="17">
-        <img src="./images/men13.JPEG" alt="Gallery 17" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="18">
-        <img src="./images/gal13.png" alt="Gallery 18" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="19">
-        <img src="./images/gal8.png" alt="Gallery 19" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="20">
-        <img src="./images/ftv4.png" alt="Gallery 20" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 7: featured wide + 2 squares -->
-
-      <div class="gal-card gal-span-2 gal-rect" data-index="21">
-        <img src="./images/gal11.png" alt="Gallery 21" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="22">
-        <img src="./images/gal10.png" alt="Gallery 22" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="23">
-        <img src="./images/gal9.png" alt="Gallery 23" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <!-- Row 8: featured tall + 2 squares -->
-
-      <div class="gal-card gal-span-2 gal-tall" data-index="24">
-        <img src="https://images.unsplash.com/photo-1450610952043-fd6b9b81bc23?w=800&h=1000&fit=crop&q=85" alt="Gallery 24" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="25">
-        <img src="./images/gal12.png" alt="Gallery 25" loading="lazy"/>
-        <div class="gal-card-overlay"></div>
-      </div>
-
-      <div class="gal-card gal-square" data-index="26">
-        <img src="./images/gal14.png" alt="Gallery 26" loading="lazy"/>
+      <div class="gal-card gal-span-2" data-index="8">
+        <img src="./images/gal12.webp" alt="Gallery 8" loading="lazy"/>
         <div class="gal-card-overlay"></div>
       </div>
 
@@ -830,7 +767,7 @@
               </div>
             </div>
             <div class="svc-acc-img">
-              <img src="./images/gal12.png" alt="Homemade Gelato" loading="lazy"/>
+              <img src="./images/gal12.webp" alt="Homemade Gelato" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -858,7 +795,7 @@
               </div>
             </div>
             <div class="svc-acc-img">
-              <img src="./images/men15.JPEG" alt="Desserts" loading="lazy"/>
+              <img src="./images/men15.webp" alt="Desserts" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -886,7 +823,7 @@
               </div>
             </div>
             <div class="svc-acc-img">
-              <img src="./images/g1.PNG" alt="Coffee" loading="lazy"/>
+              <img src="./images/g1.webp" alt="Coffee" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -914,7 +851,7 @@
               </div>
             </div>
             <div class="svc-acc-img">
-              <img src="./images/gal9.png" alt="Food" loading="lazy"/>
+              <img src="./images/gal9.webp" alt="Food" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -940,10 +877,10 @@
                 <span class="svc-detail-dot">·</span>
                 <span class="svc-detail-item">Celebrations</span>
               </div>
-              <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="svc-cta">Enquire about events &rarr;</a>
+              <a href="https://wa.me/233557388773" target="_blank" rel="noopener" class="svc-cta">Enquire about events &rarr;</a>
             </div>
             <div class="svc-acc-img">
-              <img src="./images/se.jpeg" alt="Social Events" loading="lazy"/>
+              <img src="./images/se.webp" alt="Social Events" loading="lazy"/>
             </div>
           </div>
         </div>
@@ -1189,7 +1126,7 @@
 
               <!-- TikTok -->
               <a
-                href="https://www.tiktok.com/search?q=frozen%20spoon&t=1778704087109"
+                href="https://www.tiktok.com/search?q=Frozen%20spoon&t=1778952968456"
                 target="_blank" rel="noopener"
                 class="ct-social-link"
                 aria-label="TikTok"
@@ -1609,7 +1546,7 @@
         <a href="https://instagram.com/frozenspoon_gh" target="_blank" rel="noopener" class="ft-social-btn" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
         </a>
-        <a href="https://tiktok.com/@frozenspoon" target="_blank" rel="noopener" class="ft-social-btn" aria-label="TikTok">
+        <a href="https://www.tiktok.com/search?q=Frozen%20spoon&t=1778952968456" target="_blank" rel="noopener" class="ft-social-btn" aria-label="TikTok">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.83 1.54V6.78a4.85 4.85 0 01-1.06-.09z"/></svg>
         </a>
         <a href="tel:+233557388773" class="ft-social-btn" aria-label="Call us">
