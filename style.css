@@ -848,14 +848,15 @@
     .nav-hamburger { display: flex; }
     .nav-glass-pill { display: none; }
 
-    #nav { height: 80px; }
+    #nav { height: 96px; }
 
     .nav-logo-svg {
-      width: 72px;
-      height: 72px;
-      padding: 9px;
-      margin-left: 12px;
+      width: 82px;
+      height: 82px;
+      padding: 10px;
+      margin-left: 14px;
       margin-right: 0;
+      margin-top: 6px;
     }
   
     .split-text-panel { width: 50%; }
@@ -1266,28 +1267,6 @@
   margin-right: auto;
 }
 
-.ab-img-empty {
-  background: linear-gradient(175deg, #ddd5c8 0%, #c9bfb3 100%);
-  overflow: hidden;
-}
-
-.ab-founder-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.ab-founder-silhouette {
-  width: 100%;
-  height: 100%;
-  opacity: 0.55;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 
 /* Tall portrait — Founder */
 .ab-img-tall {
