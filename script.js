@@ -683,103 +683,103 @@ const MENU_DATA = {
     breakfast: {
       label: 'Breakfast',
       items: [
-        { name: 'Lebanese Labneh Sandwich', desc: 'Lebanese saj bread, labneh, tomatoes, cucumber, fresh green olives, mint leaves & extra virgin olive oil', img: '' },
-        { name: 'Smoked Salmon Bagel', desc: 'Bagel, smoked salmon, dill cream cheese, cucumber, onions, chives, mayonnaise, salt & black pepper', img: '' },
-        { name: 'Croque Madame Bagel', desc: 'Sourdough bread, ham, emmental cheese, egg, mayonnaise & béchamel sauce', img: '' },
-        { name: 'Balsamic Avocado Bagel', desc: 'Bagel, avocado, tomatoes, red onions, mayonnaise & black pepper', img: './images/men.webp' },
+        { name: 'Mushroom Omelette', desc: 'Eggs, butter, mushrooms, chives and toasted bread', img: './images/mush-omellete.webp' },
+        { name: 'Lebanese Labneh Sandwich', desc: 'Lebanese saj bread, labneh, tomatoes, cucumber, fresh green olives, mint leaves & extra virgin olive oil', img: './images/mi-lebanese-labneh.webp' },
+        { name: 'Smoked Salmon Bagel', desc: 'Bagel, smoked salmon, dill cream cheese, cucumber, onions, chives, mayonnaise, salt & black pepper', img: './images/mi-smoked-salmon-bagel.webp' },
+        { name: 'Croque Madame Bagel', desc: 'Sourdough bread, ham, emmental cheese, egg, mayonnaise & béchamel sauce', img: './images/mi-croque-madame.webp' },
+        { name: 'Balsamic Avocado Bagel', desc: 'Bagel, avocado, tomatoes, red onions, mayonnaise & black pepper', img: './images/bagel.webp' },
         { name: 'Granola Bowl', desc: 'Granola, fresh berries, honey and yoghurt', img: './images/men13.webp' },
-        { name: 'Mushroom Omelette', desc: 'Eggs, butter, mushrooms, chives and toasted bread', img: '' },
-        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: '' },
-        { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: '' },
-        { name: 'Lebanese Breakfast', desc: 'Lebanese bread, labneh with extra virgin olive oil, green olives, cucumbers, tomatoes, minced meat with eggs & hot black tea', img: '' },
+        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: './images/mi-french-toast.webp' },
+        { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: './images/mi-american-breakfast.webp' },
+        { name: 'Lebanese Breakfast', desc: 'Lebanese bread, labneh with extra virgin olive oil, green olives, cucumbers, tomatoes, minced meat with eggs & hot black tea', img: './images/mi-lebanese-breakfast.webp' },
         { name: 'English Breakfast', desc: '2 toast, 2 bacon, sausage, hashbrowns, fresh tomatoes, mushrooms, baked beans, eggs & fresh juice', img: './images/men10.webp' },
       ]
     },
     salads: {
       label: 'Salads',
       items: [
-        { name: 'Garden Salad', desc: 'Seasonal greens, cherry tomatoes, cucumber, red onion & vinaigrette', img: '' },
-        { name: 'Avocado Salad', desc: 'Creamy avocado, mixed leaves, feta, pomegranate & lemon', img: '' },
-        { name: 'Caesar Salad', desc: 'Crisp romaine, parmesan shavings, croutons & Caesar dressing', img: '' },
+        { name: 'Garden Salad', desc: 'Seasonal greens, cherry tomatoes, cucumber, red onion & vinaigrette', img: './images/sal-garden.webp' },
+        { name: 'Avocado Salad', desc: 'Creamy avocado, mixed leaves, feta, pomegranate & lemon', img: './images/sal-avocado.webp' },
+        { name: 'Caesar Salad', desc: 'Crisp romaine, parmesan shavings, croutons & Caesar dressing', img: './images/sal-caesar.webp' },
       ]
     },
     sandwiches: {
       label: 'Sandwiches',
       items: [
         { name: 'Tuna, Avocado & Sweetcorn Club Sandwich', desc: 'Tuna, avocado, sweetcorn, lettuce, cucumber & mayonnaise', img: './images/men19.webp' },
-        { name: 'Chicken, Bacon & Avocado Club Sandwich', desc: 'Chicken, bacon, avocado, black pepper, lettuce & cucumber', img: '' },
-        { name: 'Ham & Turkey Club Sandwich', desc: 'Ham, turkey breast, white cheddar, mozzarella, tomatoes, lettuce, baby spinach, mustard & mayonnaise', img: '' },
-        { name: 'Smoked Turkey Breast Sandwich', desc: 'Chicken breast, lemon, rosemary, cheese, tomatoes, lettuce & mayonnaise', img: '' },
+        { name: 'Chicken, Bacon & Avocado Club Sandwich', desc: 'Chicken, bacon, avocado, black pepper, lettuce & cucumber', img: './images/mi-club-sandwich.webp' },
+        { name: 'Ham & Turkey Club Sandwich', desc: 'Ham, turkey breast, white cheddar, mozzarella, tomatoes, lettuce, baby spinach, mustard & mayonnaise', img: './images/mi-turkey-sandwich.webp' },
+        { name: 'Smoked Turkey Breast Sandwich', desc: 'Chicken breast, lemon, rosemary, cheese, tomatoes, lettuce & mayonnaise', img: './images/mi-smoked-turkey.webp' },
       ]
     },
     burgers: {
       label: 'Burgers',
       items: [
         { name: 'Classic Beef Burger', desc: 'Beef patty, tomatoes, lettuce, burger sauce & mayo with fries', img: './images/men1.webp' },
-        { name: 'Bacon Cheeseburger', desc: 'Beef patty, bacon, tomatoes, red onions, pickled cucumber slices, burger sauce & mayonnaise with fries', img: '' },
-        { name: 'Mushroom Beef Burger', desc: 'Beef patty, sautéed mushrooms, cheddar cheese, burger sauce & mayonnaise with fries', img: '' },
-        { name: 'Chicken Breast Burger', desc: 'Chicken breast, lemon, rosemary & ginger with fries', img: '' },
+        { name: 'Bacon Cheeseburger', desc: 'Beef patty, bacon, tomatoes, red onions, pickled cucumber slices, burger sauce & mayonnaise with fries', img: './images/mi-bacon-cheeseburger.webp' },
+        { name: 'Mushroom Beef Burger', desc: 'Beef patty, sautéed mushrooms, cheddar cheese, burger sauce & mayonnaise with fries', img: './images/mi-mushroom-burger.webp' },
+        { name: 'Chicken Breast Burger', desc: 'Chicken breast, lemon, rosemary & ginger with fries', img: './images/mi-chicken-burger.webp' },
       ]
     },
     alacarte: {
       label: 'À La Carte',
       items: [
-        { name: 'Spicy Chicken Wings', desc: 'Crispy wings with a fiery spice rub', img: '' },
-        { name: 'BBQ Chicken Wings', desc: 'Slow-glazed wings in smoky BBQ sauce', img: '' },
-        { name: 'Samosa', desc: 'Golden fried pastry parcels', img: '' },
-        { name: 'Spring Rolls', desc: 'Crisp rolls with a vegetable filling', img: '' },
-        { name: 'Chicken Alfredo', desc: 'Tagliatelle pasta, creamy Alfredo sauce, chicken breast & parmesan cheese', img: '' },
+        { name: 'Spicy Chicken Wings', desc: 'Crispy wings with a fiery spice rub', img: './images/spicy-chicken-wings.webp' },
+        { name: 'BBQ Chicken Wings', desc: 'Slow-glazed wings in smoky BBQ sauce', img: './images/bbq.webp' },
+        { name: 'Samosa', desc: 'Golden fried pastry parcels', img: './images/samosa.webp' },
+        { name: 'Spring Rolls', desc: 'Crisp rolls with a vegetable filling', img: './images/springroll.webp' },
+        { name: 'Chicken Alfredo', desc: 'Tagliatelle pasta, creamy Alfredo sauce, chicken breast & parmesan cheese', img: './images/mi-chicken-alfredo.webp' },
         { name: 'Meatball Spaghetti', desc: 'Spaghetti, meatballs, tomato sauce, fresh parsley & black pepper', img: './images/men16.webp' },
         { name: 'Jollof Rice & Fish', desc: 'Smoky Ghanaian jollof with grilled fish', img: './images/gal6.webp' },
-        { name: 'Jollof Rice & Chicken', desc: 'Smoky Ghanaian jollof with tender chicken', img: '' },
-        { name: 'Jollof Rice & Goat Meat', desc: 'Smoky Ghanaian jollof with slow-cooked goat meat', img: '' },
-        { name: 'Fried Rice & Fish', desc: 'Wok-fried seasoned rice with grilled fish', img: '' },
+        { name: 'Jollof Rice & Chicken', desc: 'Smoky Ghanaian jollof with tender chicken', img: './images/jollof-chicken.webp' },
+        { name: 'Jollof Rice & Goat Meat', desc: 'Smoky Ghanaian jollof with slow-cooked goat meat', img: './images/jollof-goat.webp' },
+        { name: 'Fried Rice & Fish', desc: 'Wok-fried seasoned rice with grilled fish', img: './images/mi-fried-rice-fish.webp' },
         { name: 'Fried Rice & Chicken', desc: 'Wok-fried seasoned rice with chicken', img: './images/men22.webp' },
-        { name: 'Fried Rice & Goat Meat', desc: 'Wok-fried seasoned rice with slow-cooked goat meat', img: '' },
-        { name: 'Yam Chips & Lemon Grass Goat Meat', desc: 'Crispy yam chips paired with lemon grass-marinated goat meat', img: '' },
+        { name: 'Fried Rice & Goat Meat', desc: 'Wok-fried seasoned rice with slow-cooked goat meat', img: './images/fried-rice-goat.webp' },
+        { name: 'Yam Chips & Lemon Grass Goat Meat', desc: 'Crispy yam chips paired with lemon grass-marinated goat meat', img: './images/yam-goat.webp' },
         { name: 'Fish & Chips', desc: 'Golden fried fish fillet with crispy chips', img: './images/gal10.webp' },
       ]
     },
     coffee: {
       label: 'Coffee',
       items: [
-        { name: 'Cappuccino', desc: 'Double espresso, steamed milk and thick velvety foam', img: '' },
-        { name: 'Americano', desc: 'Double espresso diluted with hot water — clean and grounding', img: '' },
-        { name: 'Espresso Single', desc: 'One shot. Pure. Nothing added.', img: '' },
-        { name: 'Espresso Double', desc: 'Two shots pulled together. The afternoon reset.', img: '' },
+        { name: 'Cappuccino', desc: 'Double espresso, steamed milk and thick velvety foam', img: './images/mi-cappuccino.webp' },
+        { name: 'Americano', desc: 'Double espresso diluted with hot water — clean and grounding', img: './images/mi-americano.webp' },
+        { name: 'Espresso Single', desc: 'One shot. Pure. Nothing added.', img: './images/espresso.webp' },
+        { name: 'Espresso Double', desc: 'Two shots pulled together. The afternoon reset.', img: './images/mi-espresso-double.webp' },
       ]
     },
     juices: {
       label: 'Juices',
       items: [
-        { name: 'Fresh Pineapple & Mint Juice', desc: 'Cold-pressed pineapple with fresh garden mint', img: './images/men20.webp' },
-        { name: 'Fresh Pineapple Juice', desc: 'Pure cold-pressed pineapple', img: './images/men7.webp' },
+        { name: 'Fresh Pineapple & Mint Juice', desc: 'Cold-pressed pineapple with fresh garden mint', img: './images/pine-mint.webp' },
+        { name: 'Fresh Pineapple Juice', desc: 'Pure cold-pressed pineapple', img: './images/pine.webp' },
         { name: 'Fresh Orange Juice', desc: 'Squeezed Valencia oranges, nothing added', img: './images/men18.webp' },
-        { name: 'Pineapple & Ginger Juice', desc: 'Pineapple with a warming ginger kick', img: '' },
+        { name: 'Pineapple & Ginger Juice', desc: 'Pineapple with a warming ginger kick', img: './images/pine-gin.webp' },
       ]
     },
     smoothies: {
       label: 'Smoothies',
       items: [
-        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/men18.webp' },
-        { name: 'Berry Fusion', desc: 'Blueberry, strawberry, yoghurt, honey & milk', img: '' },
-        { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: './images/men20.webp' },
+        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/straw-banana.webp' },
+        { name: 'Berry Fusion', desc: 'Blueberry, strawberry, yoghurt, honey & milk', img: './images/berry-fusion.webp' },
+        { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: './images/trop-mojito.webp' },
         { name: 'Mango & Banana Blast', desc: 'Milk, mango, banana and yoghurt', img: './images/men7.webp' },
-        { name: 'Mango Passion', desc: 'Orange juice, mango, yoghurt and honey', img: '' },
-        { name: 'Raspberry Heaven', desc: 'Raspberry, blueberry, apple and mango', img: '' },
-        { name: 'Pineapple Sunset', desc: 'Pineapple, papaya and mango', img: '' },
-        { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: '' },
-        { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: '' },
-        { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: '' },
-        { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
+        { name: 'Mango Passion', desc: 'Orange juice, mango, yoghurt and honey', img: './images/mango-pass.webp' },
+        { name: 'Raspberry Heaven', desc: 'Raspberry, blueberry, apple and mango', img: './images/mi-raspberry-heaven.webp' },
+        { name: 'Pineapple Sunset', desc: 'Pineapple, papaya and mango', img: './images/mi-pineapple-sunset.webp' },
+        { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: './images/organic-sunshine.webp' },
+        { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: './images/mango-strawberry-fusion.jpeg' },
+        { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: './images/green-reviver.webp' },
+        { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: './images/mi-healthy-living.webp' },
       ]
     },
     tea: {
       label: 'Tea',
       items: [
-        { name: 'English Breakfast Tea', desc: 'Bold black tea, best with a small pour of cold milk', img: '' },
-        { name: 'Chamomile', desc: 'Dried chamomile flowers steeped slow — evening tea', img: '' },
-        { name: 'Mint Tea', desc: 'Fresh garden mint, hot water, a spoon of honey', img: '' },
+        { name: 'English Breakfast Tea', desc: 'Bold black tea, best with a small pour of cold milk', img: './images/mi-english-tea.webp' },
+        { name: 'Chamomile', desc: 'Dried chamomile flowers steeped slow — evening tea', img: './images/mi-chamomile.webp' },
+        { name: 'Mint Tea', desc: 'Fresh garden mint, hot water, a spoon of honey', img: './images/mi-mint-tea.webp' },
       ]
     },
     freakshakes: {
@@ -798,7 +798,7 @@ const MENU_DATA = {
         { name: 'Cinnamon Pancakes', desc: 'Fluffy pancakes dusted with warm cinnamon', img: './images/men6.webp' },
         { name: 'Biscoff Pancakes', desc: 'Pancakes with biscoff spread and biscuits', img: './images/men26.webp' },
         { name: 'Pancake Cone Combo', desc: 'Pancake stack with two scoops of ice cream on a cone', img: './images/men14.webp' },
-        { name: 'Pancake with Ice Cream', desc: 'Soft pancake stack with a generous scoop of ice cream', img: '' },
+        { name: 'Pancake with Ice Cream', desc: 'Soft pancake stack with a generous scoop of ice cream', img: './images/pan-ice.webp' },
       ]
     },
     waffles: {
@@ -807,16 +807,16 @@ const MENU_DATA = {
         { name: 'Brownie Waffle', desc: 'Chocolate brownie waffles', img: './images/men5.webp' },
         { name: 'Marble Waffles', desc: 'Chocolate and vanilla waffles', img: './images/men8.webp' },
         { name: 'Waffle with Ice Cream & Syrup', desc: 'Golden waffle with ice cream and a drizzle of syrup', img: './images/men15.webp' },
-        { name: 'Waffle with Ice Cream', desc: 'Golden waffle topped with a creamy scoop', img: '' },
-        { name: 'Waffle with Syrup', desc: 'Classic waffle with warm maple syrup', img: '' },
-        { name: 'Plain Waffle', desc: 'A perfectly golden waffle, simply done', img: '' },
+        { name: 'Waffle with Ice Cream', desc: 'Golden waffle topped with a creamy scoop', img: './images/waffle-cream.webp' },
+        { name: 'Waffle with Syrup', desc: 'Classic waffle with warm maple syrup', img: './images/waffle-syrup-new.webp' },
+        { name: 'Plain Waffle', desc: 'A perfectly golden waffle, simply done', img: './images/mi-waffle-icecream.webp' },
       ]
     },
     icecream: {
       label: 'Ice Cream',
       items: [
         { name: 'A Scoop of Ice Cream on a Cone', desc: 'One generous scoop of your choice on a classic cone', img: './images/men24.webp' },
-        { name: 'A Scoop of Ice Cream', desc: 'One generous scoop served in a cup', img: '' },
+        { name: 'A Scoop of Ice Cream', desc: 'One generous scoop served in a cup', img: './images/mi-icecream-scoop.webp' },
       ]
     },
   };
