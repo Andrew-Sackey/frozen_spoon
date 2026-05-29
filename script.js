@@ -684,13 +684,13 @@ const MENU_DATA = {
       label: 'Breakfast',
       items: [
         { name: 'Mushroom Omelette', desc: 'Eggs, butter, mushrooms, chives and toasted bread', img: './images/mush-omellete.webp' },
-        { name: 'Lebanese Labneh Sandwich', desc: 'Lebanese saj bread, labneh, tomatoes, cucumber, fresh green olives, mint leaves & extra virgin olive oil', img: './images/mi-lebanese-labneh.webp' },
-        { name: 'Smoked Salmon Bagel', desc: 'Bagel, smoked salmon, dill cream cheese, cucumber, onions, chives, mayonnaise, salt & black pepper', img: './images/mi-smoked-salmon-bagel.webp' },
+        { name: 'Lebanese Labneh Sandwich', desc: 'Lebanese saj bread, labneh, tomatoes, cucumber, fresh green olives, mint leaves & extra virgin olive oil', img: './images/lebanese-sandwich.webp' },
+        { name: 'Smoked Salmon Bagel', desc: 'Bagel, smoked salmon, dill cream cheese, cucumber, onions, chives, mayonnaise, salt & black pepper', img: './images/smoked-salmon.webp' },
         { name: 'Croque Madame Bagel', desc: 'Sourdough bread, ham, emmental cheese, egg, mayonnaise & béchamel sauce', img: './images/mi-croque-madame.webp' },
         { name: 'Balsamic Avocado Bagel', desc: 'Bagel, avocado, tomatoes, red onions, mayonnaise & black pepper', img: './images/bagel.webp' },
         { name: 'Granola Bowl', desc: 'Granola, fresh berries, honey and yoghurt', img: './images/men13.webp' },
-        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: './images/mi-french-toast.webp' },
-        { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: './images/mi-american-breakfast.webp' },
+        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: './images/french-toast.webp' },
+        { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: './images/ame-breakfast.webp' },
         { name: 'Lebanese Breakfast', desc: 'Lebanese bread, labneh with extra virgin olive oil, green olives, cucumbers, tomatoes, minced meat with eggs & hot black tea', img: './images/mi-lebanese-breakfast.webp' },
         { name: 'English Breakfast', desc: '2 toast, 2 bacon, sausage, hashbrowns, fresh tomatoes, mushrooms, baked beans, eggs & fresh juice', img: './images/men10.webp' },
       ]
@@ -706,7 +706,7 @@ const MENU_DATA = {
     sandwiches: {
       label: 'Sandwiches',
       items: [
-        { name: 'Tuna, Avocado & Sweetcorn Club Sandwich', desc: 'Tuna, avocado, sweetcorn, lettuce, cucumber & mayonnaise', img: './images/men19.webp' },
+        { name: 'Tuna, Avocado & Sweetcorn Club Sandwich', desc: 'Tuna, avocado, sweetcorn, lettuce, cucumber & mayonnaise', img: './images/tuna-sandwich.webp' },
         { name: 'Chicken, Bacon & Avocado Club Sandwich', desc: 'Chicken, bacon, avocado, black pepper, lettuce & cucumber', img: './images/mi-club-sandwich.webp' },
         { name: 'Ham & Turkey Club Sandwich', desc: 'Ham, turkey breast, white cheddar, mozzarella, tomatoes, lettuce, baby spinach, mustard & mayonnaise', img: './images/mi-turkey-sandwich.webp' },
         { name: 'Smoked Turkey Breast Sandwich', desc: 'Chicken breast, lemon, rosemary, cheese, tomatoes, lettuce & mayonnaise', img: './images/mi-smoked-turkey.webp' },
@@ -715,7 +715,7 @@ const MENU_DATA = {
     burgers: {
       label: 'Burgers',
       items: [
-        { name: 'Classic Beef Burger', desc: 'Beef patty, tomatoes, lettuce, burger sauce & mayo with fries', img: './images/men1.webp' },
+        { name: 'Classic Beef Burger', desc: 'Beef patty, tomatoes, lettuce, burger sauce & mayo with fries', img: './images/classic-burger.webp' },
         { name: 'Bacon Cheeseburger', desc: 'Beef patty, bacon, tomatoes, red onions, pickled cucumber slices, burger sauce & mayonnaise with fries', img: './images/mi-bacon-cheeseburger.webp' },
         { name: 'Mushroom Beef Burger', desc: 'Beef patty, sautéed mushrooms, cheddar cheese, burger sauce & mayonnaise with fries', img: './images/mi-mushroom-burger.webp' },
         { name: 'Chicken Breast Burger', desc: 'Chicken breast, lemon, rosemary & ginger with fries', img: './images/mi-chicken-burger.webp' },
@@ -743,8 +743,8 @@ const MENU_DATA = {
     coffee: {
       label: 'Coffee',
       items: [
-        { name: 'Cappuccino', desc: 'Double espresso, steamed milk and thick velvety foam', img: './images/mi-cappuccino.webp' },
-        { name: 'Americano', desc: 'Double espresso diluted with hot water — clean and grounding', img: './images/mi-americano.webp' },
+        { name: 'Cappuccino', desc: 'Double espresso, steamed milk and thick velvety foam', img: './images/cappucino.webp' },
+        { name: 'Americano', desc: 'Double espresso diluted with hot water — clean and grounding', img: './images/americano.webp' },
         { name: 'Espresso Single', desc: 'One shot. Pure. Nothing added.', img: './images/espresso.webp' },
         { name: 'Espresso Double', desc: 'Two shots pulled together. The afternoon reset.', img: './images/mi-espresso-double.webp' },
       ]
@@ -777,9 +777,9 @@ const MENU_DATA = {
     tea: {
       label: 'Tea',
       items: [
-        { name: 'English Breakfast Tea', desc: 'Bold black tea, best with a small pour of cold milk', img: './images/mi-english-tea.webp' },
-        { name: 'Chamomile', desc: 'Dried chamomile flowers steeped slow — evening tea', img: './images/mi-chamomile.webp' },
-        { name: 'Mint Tea', desc: 'Fresh garden mint, hot water, a spoon of honey', img: './images/mi-mint-tea.webp' },
+        { name: 'English Breakfast Tea', desc: 'Bold black tea, best with a small pour of cold milk', img: './images/eng-tea.webp' },
+        { name: 'Chamomile', desc: 'Dried chamomile flowers steeped slow — evening tea', img: './images/chamo.webp' },
+        { name: 'Mint Tea', desc: 'Fresh garden mint, hot water, a spoon of honey', img: './images/mint-tea.webp' },
       ]
     },
     freakshakes: {
