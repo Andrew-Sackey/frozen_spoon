@@ -3825,10 +3825,15 @@
   position: relative;
 }
 
-.ft-copy,
+.ft-copy {
+  font-size: 12px;
+  color: rgba(251,248,243,.58);
+  letter-spacing: .03em;
+}
+
 .ft-made {
   font-size: 12px;
-  color: rgba(251,248,243,.28);
+  color: rgba(251,248,243,.32);
   letter-spacing: .02em;
 }
 

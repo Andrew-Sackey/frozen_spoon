@@ -689,7 +689,7 @@ const MENU_DATA = {
         { name: 'Croque Madame Bagel', desc: 'Sourdough bread, ham, emmental cheese, egg, mayonnaise & béchamel sauce', img: './images/mi-croque-madame.webp' },
         { name: 'Balsamic Avocado Bagel', desc: 'Bagel, avocado, tomatoes, red onions, mayonnaise & black pepper', img: './images/bagel.webp' },
         { name: 'Granola Bowl', desc: 'Granola, fresh berries, honey and yoghurt', img: './images/men13.webp' },
-        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: '' },
+        { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: './images/french-toast.webp' },
         { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: './images/ame-breakfast.webp' },
         { name: 'Lebanese Breakfast', desc: 'Lebanese bread, labneh with extra virgin olive oil, green olives, cucumbers, tomatoes, minced meat with eggs & hot black tea', img: './images/mi-lebanese-breakfast.webp' },
         { name: 'English Breakfast', desc: '2 toast, 2 bacon, sausage, hashbrowns, fresh tomatoes, mushrooms, baked beans, eggs & fresh juice', img: './images/men10.webp' },
@@ -734,7 +734,7 @@ const MENU_DATA = {
         { name: 'Jollof Rice & Goat Meat', desc: 'Smoky Ghanaian jollof with slow-cooked goat meat', img: '' },
         { name: 'Fried Rice & Fish', desc: 'Wok-fried seasoned rice with grilled fish', img: '' },
         { name: 'Fried Rice & Chicken', desc: 'Wok-fried seasoned rice with chicken', img: './images/men22.webp' },
-        { name: 'Fried Rice & Goat Meat', desc: 'Wok-fried seasoned rice with slow-cooked goat meat', img: '' },
+        { name: 'Fried Rice & Goat Meat', desc: 'Wok-fried seasoned rice with slow-cooked goat meat', img: './images/fried-rice-goat.webp' },
         { name: 'Yam Chips & Goat Meat', desc: 'Crispy yam chips paired with goat meat', img: './images/yam-goat.webp' },
         { name: 'Fish & Chips', desc: 'Golden fried fish fillet with crispy chips', img: './images/gal10.webp' },
       ]
@@ -760,7 +760,7 @@ const MENU_DATA = {
     smoothies: {
       label: 'Smoothies',
       items: [
-        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: '' },
+        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/straw-banana.webp' },
         { name: 'Berry Fusion', desc: 'Blueberry, strawberry, yoghurt, honey & milk', img: './images/berry-fusion.webp' },
         { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: '' },
         { name: 'Mango & Banana Blast', desc: 'Milk, mango, banana and yoghurt', img: './images/men7.webp' },
@@ -768,7 +768,7 @@ const MENU_DATA = {
         { name: 'Raspberry Heaven', desc: 'Raspberry, blueberry, apple and mango', img: './images/mi-raspberry-heaven.webp' },
         { name: 'Pineapple Sunset', desc: 'Pineapple, papaya and mango', img: './images/mi-pineapple-sunset.webp' },
         { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: '' },
-        { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: '' },
+        { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: './images/mango-strawberry.webp' },
         { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: '' },
         { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
       ]
@@ -786,16 +786,16 @@ const MENU_DATA = {
       items: [
         { name: 'Affogato', desc: 'A shot of hot espresso poured over a scoop of vanilla ice cream', img: '' },
         { name: 'Baileys Freakshake', desc: 'An indulgent tower of cream, chocolate and Baileys', img: '' },
-        { name: 'Velvet Dream', desc: 'Strawberry ice cream milkshake, red velvet cake, whipped cream & strawberry syrup', img: '' },
+        { name: 'Velvet Dream', desc: 'Strawberry ice cream milkshake, red velvet cake, whipped cream & strawberry syrup', img: './images/velvet-dream.webp' },
         { name: 'Fudge Deluxe', desc: 'Chocolate milkshake, nutella, oreo pieces, chocolate syrup, brownie waffle pieces, vanilla scoop & mini pancakes', img: './images/men12.webp' },
-        { name: 'Dolcé Swirl', desc: 'Caramel ice cream milkshake, mini pancakes, maple syrup, cinnamon & whipped cream', img: '' },
+        { name: 'Dolcé Swirl', desc: 'Caramel ice cream milkshake, mini pancakes, maple syrup, cinnamon & whipped cream', img: './images/dolce-swirl.webp' },
       ]
     },
     pancakes: {
       label: 'Pancakes',
       items: [
         { name: 'Cinnamon Pancakes', desc: 'Fluffy pancakes dusted with warm cinnamon', img: '' },
-        { name: 'Biscoff Pancakes', desc: 'Pancakes with biscoff spread and biscuits', img: './images/men26.webp' },
+        { name: 'Biscoff Pancakes', desc: 'Pancakes with biscoff spread and biscuits', img: './images/biscoff-pancakes.webp' },
         { name: 'Pancake Cone Combo', desc: 'Pancake stack with two scoops of ice cream on a cone', img: './images/men14.webp' },
         { name: 'Pancake with Ice Cream', desc: 'Soft pancake stack with a generous scoop of ice cream', img: './images/pan-ice.webp' },
       ]
@@ -804,7 +804,7 @@ const MENU_DATA = {
       label: 'Waffles',
       items: [
         { name: 'Brownie Waffle', desc: 'Chocolate brownie waffles', img: './images/men5.webp' },
-        { name: 'Marble Waffles', desc: 'Chocolate and vanilla waffles', img: '' },
+        { name: 'Marble Waffles', desc: 'Chocolate and vanilla waffles', img: './images/marble-waffle.webp' },
         { name: 'Waffle with Ice Cream & Syrup', desc: 'Golden waffle with ice cream and a drizzle of syrup', img: './images/men8.webp' },
         { name: 'Waffle with Ice Cream', desc: 'Golden waffle topped with a creamy scoop', img: './images/waffle-cream.webp' },
         { name: 'Waffle with Syrup', desc: 'Classic waffle with warm maple syrup', img: './images/waffle-syrup-new.webp' },
@@ -918,11 +918,19 @@ const MENU_DATA = {
       duration: 0.35,
       ease: 'power2.in',
       onComplete: () => {
-        menuSpotImg.src = item.img.replace('h=800', 'h=900').replace('w=600', 'w=1600');
+        if (item.img) {
+          menuSpotImg.src = item.img;
+          menuSpotImg.alt = item.name;
+          menuSpotImg.style.visibility = 'visible';
+        } else {
+          menuSpotImg.removeAttribute('src');
+          menuSpotImg.alt = '';
+          menuSpotImg.style.visibility = 'hidden';
+        }
         menuSpotHeadline.innerHTML = item.name;
         menuSpotBody.textContent   = item.desc;
         gsap.to('#menu-spotlight-img', {
-          opacity: 1, duration: 0.6, ease: 'power2.out'
+          opacity: item.img ? 1 : 0, duration: 0.6, ease: 'power2.out'
         });
       }
     });
