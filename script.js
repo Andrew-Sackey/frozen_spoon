@@ -784,7 +784,7 @@ const MENU_DATA = {
     freakshakes: {
       label: 'Freakshakes',
       items: [
-        { name: 'Affogato', desc: 'A shot of hot espresso poured over a scoop of vanilla ice cream', img: '' },
+        { name: 'Affogato', desc: 'A shot of hot espresso poured over a scoop of vanilla ice cream', img: './images/affogato.webp' },
         { name: 'Baileys Freakshake', desc: 'An indulgent tower of cream, chocolate and Baileys', img: '' },
         { name: 'Velvet Dream', desc: 'Strawberry ice cream milkshake, red velvet cake, whipped cream & strawberry syrup', img: './images/velvet-dream.webp' },
         { name: 'Fudge Deluxe', desc: 'Chocolate milkshake, nutella, oreo pieces, chocolate syrup, brownie waffle pieces, vanilla scoop & mini pancakes', img: './images/men12.webp' },
@@ -794,7 +794,7 @@ const MENU_DATA = {
     pancakes: {
       label: 'Pancakes',
       items: [
-        { name: 'Cinnamon Pancakes', desc: 'Fluffy pancakes dusted with warm cinnamon', img: '' },
+        { name: 'Cinnamon Pancakes', desc: 'Fluffy pancakes dusted with warm cinnamon', img: './images/cinnamon-pancakes.webp' },
         { name: 'Biscoff Pancakes', desc: 'Pancakes with biscoff spread and biscuits', img: './images/biscoff-pancakes.webp' },
         { name: 'Pancake Cone Combo', desc: 'Pancake stack with two scoops of ice cream on a cone', img: './images/men14.webp' },
         { name: 'Pancake with Ice Cream', desc: 'Soft pancake stack with a generous scoop of ice cream', img: './images/pan-ice.webp' },
