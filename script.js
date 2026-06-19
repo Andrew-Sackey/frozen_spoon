@@ -690,6 +690,7 @@ const MENU_DATA = {
         { name: 'Balsamic Avocado Bagel', desc: 'Bagel, avocado, tomatoes, red onions, mayonnaise & black pepper', img: './images/bagel.webp' },
         { name: 'Granola Bowl', desc: 'Granola, fresh berries, honey and yoghurt', img: './images/men13.webp' },
         { name: 'French Toast', desc: 'French toast with ice cream or maple syrup', img: './images/french-toast.webp' },
+        { name: 'Biscoff French Toast', desc: 'Golden French toast with biscoff spread, biscuit crumble and a drizzle of syrup', img: './images/biscoff-french-toast.webp' },
         { name: 'American Breakfast', desc: '4 pancakes, 3 bacon, scrambled eggs & fresh orange juice', img: './images/ame-breakfast.webp' },
         { name: 'Lebanese Breakfast', desc: 'Lebanese bread, labneh with extra virgin olive oil, green olives, cucumbers, tomatoes, minced meat with eggs & hot black tea', img: './images/mi-lebanese-breakfast.webp' },
         { name: 'English Breakfast', desc: '2 toast, 2 bacon, sausage, hashbrowns, fresh tomatoes, mushrooms, baked beans, eggs & fresh juice', img: './images/men10.webp' },
@@ -753,21 +754,21 @@ const MENU_DATA = {
       items: [
         { name: 'Fresh Pineapple & Mint Juice', desc: 'Cold-pressed pineapple with fresh garden mint', img: './images/pine-mint.webp' },
         { name: 'Fresh Pineapple Juice', desc: 'Pure cold-pressed pineapple', img: './images/pine.webp' },
-        { name: 'Fresh Orange Juice', desc: 'Squeezed Valencia oranges, nothing added', img: './images/men18.webp' },
+        { name: 'Fresh Orange Juice', desc: 'Squeezed Valencia oranges, nothing added', img: '' },
         { name: 'Pineapple & Ginger Juice', desc: 'Pineapple with a warming ginger kick', img: './images/pine-gin.webp' },
       ]
     },
     smoothies: {
       label: 'Smoothies',
       items: [
-        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/straw-banana.webp' },
+        { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/straw-banana.webp', imgPos: 'center 72%' },
         { name: 'Berry Fusion', desc: 'Blueberry, strawberry, yoghurt, honey & milk', img: './images/berry-fusion.webp' },
         { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: '' },
         { name: 'Mango & Banana Blast', desc: 'Milk, mango, banana and yoghurt', img: './images/men7.webp' },
         { name: 'Mango Passion', desc: 'Orange juice, mango, yoghurt and honey', img: './images/mango-pass.webp' },
         { name: 'Raspberry Heaven', desc: 'Raspberry, blueberry, apple and mango', img: './images/mi-raspberry-heaven.webp' },
         { name: 'Pineapple Sunset', desc: 'Pineapple, papaya and mango', img: './images/mi-pineapple-sunset.webp' },
-        { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: '' },
+        { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: './images/men18.webp' },
         { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: './images/mango-strawberry.webp' },
         { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: '' },
         { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
@@ -785,6 +786,7 @@ const MENU_DATA = {
       label: 'Freakshakes',
       items: [
         { name: 'Affogato', desc: 'A shot of hot espresso poured over a scoop of vanilla ice cream', img: './images/affogato.webp' },
+        { name: 'Biscoff Freakshake', desc: 'Biscoff spread milkshake, whipped cream, biscoff biscuit crumble and biscoff drizzle', img: './images/sty.webp' },
         { name: 'Baileys Freakshake', desc: 'An indulgent tower of cream, chocolate and Baileys', img: '' },
         { name: 'Velvet Dream', desc: 'Strawberry ice cream milkshake, red velvet cake, whipped cream & strawberry syrup', img: './images/velvet-dream.webp' },
         { name: 'Fudge Deluxe', desc: 'Chocolate milkshake, nutella, oreo pieces, chocolate syrup, brownie waffle pieces, vanilla scoop & mini pancakes', img: './images/men12.webp' },
@@ -849,7 +851,7 @@ const MENU_DATA = {
     // Build cards HTML
     menuCardsWrap.innerHTML = cat.items.map((item, i) => `
       <div class="menu-card${item.img ? '' : ' menu-card-no-img'}" data-idx="${i}">
-        ${item.img ? `<img class="menu-card-img" src="${item.img}" alt="${item.name}" loading="lazy"/>` : ''}
+        ${item.img ? `<img class="menu-card-img" src="${item.img}" alt="${item.name}" loading="lazy"${item.imgPos ? ` style="object-position:${item.imgPos}"` : ''}/>` : ''}
         <div class="menu-card-overlay"></div>
         <span class="menu-card-num">${String(i+1).padStart(2,'0')}</span>
         <div class="menu-card-info">
