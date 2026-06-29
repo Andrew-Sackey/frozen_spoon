@@ -189,12 +189,75 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots        = qa('.hero-dot');
     const prevBtn     = q('#hero-prev');
     const nextBtn     = q('#hero-next');
+    const heroVid1    = document.getElementById('hero-vid-1');
+    const heroVid2    = document.getElementById('hero-vid-2');
+    const heroVideos  = [heroVid1, heroVid2];
+    const heroMuteBtn = document.getElementById('hero-mute');
+    const VIDEO_SLIDES = [5, 6];
     const SLIDE_COUNT = slides.length;
     const AUTO_MS     = 5500;
   
     let current       = 0;
     let autoTimer     = null;
     let transitioning = false;
+    let heroSoundOn   = false;
+    let heroInView    = true;
+
+    function syncHeroVideoAudio() {
+      heroVideos.forEach((vid, i) => {
+        if (!vid) return;
+        const isActiveVideo = heroInView && current === i + 5 && heroSoundOn;
+        vid.muted = !isActiveVideo;
+      });
+      if (heroMuteBtn) {
+        heroMuteBtn.classList.toggle('unmuted', heroSoundOn && heroInView && VIDEO_SLIDES.includes(current));
+        heroMuteBtn.setAttribute('aria-label', heroSoundOn ? 'Mute sound' : 'Unmute sound');
+      }
+    }
+
+    function silenceHeroVideos() {
+      heroVideos.forEach((vid) => {
+        if (!vid) return;
+        vid.pause();
+        vid.muted = true;
+        vid.onended = null;
+      });
+    }
+
+    function heroCutMedia() {
+      heroSoundOn = false;
+      silenceHeroVideos();
+      clearInterval(autoTimer);
+      syncHeroVideoAudio();
+    }
+
+    function heroResumeIfNeeded() {
+      if (!heroInView) return;
+      if (VIDEO_SLIDES.includes(current)) {
+        playHeroVideo(current);
+      } else {
+        startAuto();
+      }
+    }
+
+    function playHeroVideo(slideIndex) {
+      if (!heroInView) return;
+      const enteringVid = heroVideos[slideIndex - 5];
+      if (!enteringVid) return;
+
+      syncHeroVideoAudio();
+      enteringVid.currentTime = 0;
+      enteringVid.play().catch(() => {});
+
+      enteringVid.onended = () => {
+        clearInterval(autoTimer);
+        if (slideIndex === 5) {
+          goTo(6, 'next');
+        } else {
+          goTo(0, 'next');
+        }
+      };
+    }
   
     // ── Transition types per slide index (exit → enter) ──────
     // 0: horizontal push right
@@ -202,12 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2: crossfade + scale bloom
     // 3: diagonal wipe
     // 4: full flash fade
-    const transitions = ['push', 'clip-up', 'bloom', 'diagonal', 'flash'];
+    const transitions = ['push', 'clip-up', 'bloom', 'diagonal', 'flash', 'bloom', 'flash'];
   
   
     // ── Subtle image motion — no zoom (keeps images sharp) ───
     function startKenBurns(slide, reset) {
       const img  = slide.querySelector('.slide-img');
+      if (!img) return;
       const type = img?.dataset.zoom || 'in';
   
       if (reset) gsap.set(img, { scale: 1, x: 0 });
@@ -308,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
       }
   
-      else if (style === 'minimal-caption') {
+      else if (style === 'minimal-caption' || style === 'video') {
         gsap.to(slide.querySelector('.caption-line-rule'), {
           scaleX: 1, duration: 0.7, ease: 'power3.out', delay: 0.3,
         });
@@ -336,7 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const h = slide.querySelector('.sc-headline-massive > span');
         if (h) gsap.set(h, { y: '105%' });
       }
-      if (style === 'minimal-caption') {
+      if (style === 'minimal-caption' || style === 'video') {
         gsap.set(slide.querySelector('.caption-line-rule'), { scaleX: 0 });
         gsap.set(slide.querySelector('.sc-headline-caption'), { opacity: 0 });
       }
@@ -353,7 +417,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Core transition ───────────────────────────────────────
     function goTo(next, direction) {
       if (transitioning || next === current) return;
+
+      // If leaving a video slide, pause and cut sound
+      if (VIDEO_SLIDES.includes(current)) {
+        const leavingVid = heroVideos[current - 5];
+        if (leavingVid) {
+          leavingVid.pause();
+          leavingVid.currentTime = 0;
+          leavingVid.muted = true;
+          leavingVid.onended = null;
+        }
+      }
+
+      // Cut sound on all hero videos when moving to a photo slide
+      if (!VIDEO_SLIDES.includes(next)) {
+        heroSoundOn = false;
+        heroVideos.forEach((vid) => { if (vid) vid.muted = true; });
+      }
+
       transitioning = true;
+
+      // Preload video 1 when slide 4 becomes active; video 2 when video 1 starts
+      if (next === 3 && heroVid1 && heroVid1.preload === 'none') {
+        heroVid1.preload = 'auto';
+        heroVid1.load();
+      }
+      if (next === 5 && heroVid2 && heroVid2.preload === 'none') {
+        heroVid2.preload = 'auto';
+        heroVid2.load();
+      }
   
       const fromSlide = slides[current];
       const toSlide   = slides[next];
@@ -378,6 +470,15 @@ document.addEventListener('DOMContentLoaded', () => {
           animateContentIn(toSlide);
           startKenBurns(toSlide, true);
           transitioning = false;
+
+          // If entering a video slide, play the video and advance on end
+          if (VIDEO_SLIDES.includes(next)) {
+            clearInterval(autoTimer);
+            playHeroVideo(next);
+          } else {
+            heroVideos.forEach(v => { if (v) v.onended = null; });
+            startAuto();
+          }
         }
       });
   
@@ -419,12 +520,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── UI state update ───────────────────────────────────────
     function updateUI() {
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (heroMuteBtn) {
+        heroMuteBtn.classList.toggle('is-visible', VIDEO_SLIDES.includes(current));
+      }
+      syncHeroVideoAudio();
     }
   
   
     // ── Auto cycle ────────────────────────────────────────────
     function startAuto() {
       clearInterval(autoTimer);
+      if (VIDEO_SLIDES.includes(current)) return;
       autoTimer = setInterval(() => {
         goTo((current + 1) % SLIDE_COUNT, 'next');
       }, AUTO_MS);
@@ -482,7 +588,38 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[0].classList.add('active');
       animateContentIn(slides[0]);
       startKenBurns(slides[0], true);
+      syncHeroVideoAudio();
       startAuto();
+
+      if (heroMuteBtn) {
+        heroMuteBtn.addEventListener('click', () => {
+          if (!heroInView || !VIDEO_SLIDES.includes(current)) return;
+          heroSoundOn = !heroSoundOn;
+          syncHeroVideoAudio();
+          const activeVid = heroVideos[current - 5];
+          if (activeVid && !activeVid.paused) {
+            activeVid.play().catch(() => {});
+          }
+        });
+      }
+
+      ScrollTrigger.create({
+        trigger: '#hero',
+        start:   'top bottom',
+        end:     'bottom top',
+        onEnter:     () => { heroInView = true; heroResumeIfNeeded(); },
+        onEnterBack: () => { heroInView = true; heroResumeIfNeeded(); },
+        onLeave:     () => { heroInView = false; heroCutMedia(); },
+        onLeaveBack: () => { heroInView = false; heroCutMedia(); },
+      });
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          heroCutMedia();
+        } else if (heroInView) {
+          heroResumeIfNeeded();
+        }
+      });
     }
 
 
@@ -730,14 +867,14 @@ const MENU_DATA = {
         { name: 'Spring Rolls', desc: 'Crisp rolls with a vegetable filling', img: './images/springroll.webp' },
         { name: 'Chicken Alfredo', desc: 'Tagliatelle pasta, creamy Alfredo sauce, chicken breast & parmesan cheese', img: './images/mi-chicken-alfredo.webp' },
         { name: 'Meatball Spaghetti', desc: 'Spaghetti, meatballs, tomato sauce, fresh parsley & black pepper', img: './images/men16.webp' },
-        { name: 'Jollof Rice & Fish', desc: 'Smoky Ghanaian jollof with grilled fish', img: '' },
+        { name: 'Jollof Rice & Fish', desc: 'Smoky Ghanaian jollof with grilled fish', img: './images/jollof-fish.webp' },
         { name: 'Jollof Rice & Chicken', desc: 'Smoky Ghanaian jollof with tender chicken', img: './images/gal6.webp' },
-        { name: 'Jollof Rice & Goat Meat', desc: 'Smoky Ghanaian jollof with slow-cooked goat meat', img: '' },
-        { name: 'Fried Rice & Fish', desc: 'Wok-fried seasoned rice with grilled fish', img: '' },
+        { name: 'Jollof Rice & Goat Meat', desc: 'Smoky Ghanaian jollof with slow-cooked goat meat', img: './images/jollof-goat.webp' },
+        { name: 'Fried Rice & Fish', desc: 'Wok-fried seasoned rice with grilled fish', img: './images/fried-rice-fish.webp' },
         { name: 'Fried Rice & Chicken', desc: 'Wok-fried seasoned rice with chicken', img: './images/men22.webp' },
         { name: 'Fried Rice & Goat Meat', desc: 'Wok-fried seasoned rice with slow-cooked goat meat', img: './images/fried-rice-goat.webp' },
         { name: 'Yam Chips & Goat Meat', desc: 'Crispy yam chips paired with goat meat', img: './images/yam-goat.webp' },
-        { name: 'Fish & Chips', desc: 'Golden fried fish fillet with crispy chips', img: './images/gal10.webp' },
+        { name: 'Fish & Chips', desc: 'Golden fried fish fillet with crispy chips', img: './images/fish-chips.webp' },
       ]
     },
     coffee: {
@@ -770,7 +907,7 @@ const MENU_DATA = {
         { name: 'Pineapple Sunset', desc: 'Pineapple, papaya and mango', img: './images/mi-pineapple-sunset.webp' },
         { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: './images/men18.webp' },
         { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: './images/mango-strawberry.webp' },
-        { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: '' },
+        { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: './images/green-reviver.webp' },
         { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
       ]
     },
