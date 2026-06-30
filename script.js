@@ -891,7 +891,7 @@ const MENU_DATA = {
       items: [
         { name: 'Fresh Pineapple & Mint Juice', desc: 'Cold-pressed pineapple with fresh garden mint', img: './images/pine-mint.webp' },
         { name: 'Fresh Pineapple Juice', desc: 'Pure cold-pressed pineapple', img: './images/pine.webp' },
-        { name: 'Fresh Orange Juice', desc: 'Squeezed Valencia oranges, nothing added', img: '' },
+        // { name: 'Fresh Orange Juice', desc: 'Squeezed Valencia oranges, nothing added', img: '' },
         { name: 'Pineapple & Ginger Juice', desc: 'Pineapple with a warming ginger kick', img: './images/pine-gin.webp' },
       ]
     },
@@ -900,7 +900,7 @@ const MENU_DATA = {
       items: [
         { name: 'Strawberry & Banana', desc: 'Strawberry, banana, yoghurt, honey, ginger and milk', img: './images/straw-banana.webp', imgPos: 'center 72%' },
         { name: 'Berry Fusion', desc: 'Blueberry, strawberry, yoghurt, honey & milk', img: './images/berry-fusion.webp' },
-        { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: '' },
+        // { name: 'Tropical Mojito', desc: 'Pineapple juice, lemon juice, pineapple, mint, flax seeds & spinach', img: '' },
         { name: 'Mango & Banana Blast', desc: 'Milk, mango, banana and yoghurt', img: './images/men7.webp' },
         { name: 'Mango Passion', desc: 'Orange juice, mango, yoghurt and honey', img: './images/mango-pass.webp' },
         { name: 'Raspberry Heaven', desc: 'Raspberry, blueberry, apple and mango', img: './images/mi-raspberry-heaven.webp' },
@@ -908,7 +908,7 @@ const MENU_DATA = {
         { name: 'Organic Sunshine', desc: 'Pineapple, mango and banana', img: './images/men18.webp' },
         { name: 'Mango & Strawberry', desc: 'Mango, strawberry and orange juice', img: './images/mango-strawberry.webp' },
         { name: 'Green Reviver', desc: 'Kale, lemon juice, orange juice and banana', img: './images/green-reviver.webp' },
-        { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
+        // { name: 'Healthy Living', desc: 'Avocado, dates, banana and almond milk', img: '' },
       ]
     },
     tea: {
@@ -924,7 +924,7 @@ const MENU_DATA = {
       items: [
         { name: 'Affogato', desc: 'A shot of hot espresso poured over a scoop of vanilla ice cream', img: './images/affogato.webp' },
         { name: 'Biscoff Freakshake', desc: 'Biscoff spread milkshake, whipped cream, biscoff biscuit crumble and biscoff drizzle', img: './images/sty.webp' },
-        { name: 'Baileys Freakshake', desc: 'An indulgent tower of cream, chocolate and Baileys', img: '' },
+        // { name: 'Baileys Freakshake', desc: 'An indulgent tower of cream, chocolate and Baileys', img: '' },
         { name: 'Velvet Dream', desc: 'Strawberry ice cream milkshake, red velvet cake, whipped cream & strawberry syrup', img: './images/velvet-dream.webp' },
         { name: 'Fudge Deluxe', desc: 'Chocolate milkshake, nutella, oreo pieces, chocolate syrup, brownie waffle pieces, vanilla scoop & mini pancakes', img: './images/men12.webp' },
         { name: 'Dolcé Swirl', desc: 'Caramel ice cream milkshake, mini pancakes, maple syrup, cinnamon & whipped cream', img: './images/dolce-swirl.webp' },
@@ -953,8 +953,8 @@ const MENU_DATA = {
     icecream: {
       label: 'Ice Cream',
       items: [
-        { name: 'A Scoop of Ice Cream on a Cone', desc: 'One generous scoop of your choice on a classic cone', img: './images/men24.webp' },
-        { name: 'A Scoop of Ice Cream', desc: 'One generous scoop served in a cup', img: './images/mi-icecream-scoop.webp' },
+        { name: 'A Scoop of Ice Cream on a Cone', desc: 'One generous scoop of your choice on a classic cone', img: './images/ice-cream-cone.webp' },
+        { name: 'A Scoop of Ice Cream', desc: 'One generous scoop served in a cup', img: './images/ice-cream-cup.webp' },
       ]
     },
   };
