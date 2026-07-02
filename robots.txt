@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://frozenspoon.vercel.app/sitemap.xml
+Sitemap: https://frozenspoongh.com/sitemap.xml
